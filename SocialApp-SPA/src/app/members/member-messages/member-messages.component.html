@@ -1,0 +1,165 @@
+<div class="card">
+  <div class="card-body">
+    <div *ngIf="messages?.length === 0">
+      <p>No Messages Yet</p>
+    </div>
+
+
+
+
+
+
+    <ul class="chat">
+      <li *ngFor="let message of messages">
+
+
+
+        <!-- to them -->
+          <div *ngIf="message.senderId == recipientId">
+            <span class="chat-img float-left">
+              <img src="{{message.senderPhotoUrl}}" alt="{{message.senderKnownAs}}" class="rounded-circle">
+            </span>
+
+            <div class="chat-body">
+              <div class="header">
+                <strong class="primary-font">
+                    {{message.senderKnownAs}} </strong>
+                    <small class="text-muted float-right">
+                      <span class="fa fa-clock-o">{{message.messageSent | timeAgo}}</span>
+                    </small>
+              </div>
+              <p>{{message.content}}</p>
+            </div>
+          </div>
+
+
+
+
+
+          <!-- to me  -->
+              <div *ngIf="message.senderId != recipientId">
+                <span class="chat-img float-right">
+                  <img src="{{message.senderPhotoUrl}}" alt="{{message.senderKnownAs}}" class="rounded-circle">
+                </span>
+
+                <div class="chat-body">
+                  <div class="header">
+                    <small class="text-muted">
+                      <span class="fa fa-clock-o">{{message.messageSent | timeAgo}}</span>
+                      <span *ngIf="!message.isRead" class="text-danger">(unread)</span>
+                      <span  *ngIf="message.isRead"   class="text-success">(Read {{message.dateRead | timeAgo }} )</span>
+                    </small>
+                    <strong class="primary-font float-right">
+                        {{message.senderKnownAs}} </strong>
+
+                  </div>
+                  <p>{{message.content}}</p>
+                </div>
+              </div>
+
+
+
+              <!-- https://valor-software.com/ngx-bootstrap/#/tabs
+
+                add ng add ngx-bootstrap  --component tabs
+
+                  usage
+
+                  // RECOMMENDED
+import { TabsModule } from 'ngx-bootstrap/tabs';
+// NOT RECOMMENDED (Angular 9 doesn't support this kind of import)
+import { TabsModule } from 'ngx-bootstrap';
+
+@NgModule({
+  imports: [TabsModule.forRoot(),...]
+})
+export class AppModule(){}
+
+
+
+example
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'demo-tabs-basic',
+  templateUrl: './basic.html'
+})
+export class DemoTabsBasicComponent {}
+
+
+
+static content template
+
+<div>
+  <p>You can select tabs directly from component</p>
+  <p>
+    <button type="button" class="btn btn-primary btn-sm" (click)="selectTab(1)">Select second tab</button>
+    <button type="button" class="btn btn-primary btn-sm" (click)="selectTab(2)">Select third tab</button>
+  </p>
+  <hr/>
+  <tabset #staticTabs>
+    <tab heading="Static title">Static content</tab>
+    <tab heading="Static Title 1">Static content 1</tab>
+    <tab heading="Static Title 2">Static content 2</tab>
+    <tab heading="Static Title 3">Static content 3</tab>
+  </tabset>
+</div>
+
+
+
+static content component
+
+              import { Component, ViewChild } from '@angular/core';
+import { TabsetComponent } from 'ngx-bootstrap/tabs';
+
+@Component({
+  selector: 'demo-tabs-manual-selection',
+  templateUrl: './manual-selection.html'
+})
+export class DemoTabsManualSelectionComponent {
+  @ViewChild('staticTabs', { static: false }) staticTabs: TabsetComponent;
+
+  selectTab(tabId: number) {
+    this.staticTabs.tabs[tabId].active = true;
+  }
+}
+
+              -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </li>
+    </ul>
+  </div>
+  <!-- below MessageThread-->
+  <div class="card-footer">
+    <form #messageForm="ngForm" (ngSubmit)="messageForm.valid && sendMessage()">
+      <div class="input-group">
+        <input type="text"
+        [(ngModel)]="newMessage.content"
+        name="content"
+        required
+        class="form-control input-sm"
+        placeholder="send a private message">
+        <div class="input-group-append">
+          <button class="btn btn-primary" [disabled]="!messageForm.valid">
+              Send
+          </button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+
+</div>

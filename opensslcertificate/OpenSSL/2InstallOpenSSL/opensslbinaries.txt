@@ -1,0 +1,36 @@
+Binaries
+Some people have offered to provide OpenSSL binary distributions for selected operating systems. The condition to get a link here is that the link is stable and can provide continued support for OpenSSL for a while.
+
+Note: many Linux distributions come with pre-compiled OpenSSL packages. Those are already well-known among the users of said distributions, and will therefore not be mentioned here. If you are such a user, we ask you to get in touch with your distributor first. This service is primarily for operating systems where there are no pre-compiled OpenSSL packages.
+
+Important Disclaimer: The listing of these third party products does not imply any endorsement by the OpenSSL project, and these organizations are not affiliated in any way with OpenSSL other than by the reference to their independent web sites here. In particular any donations or payments to any of these organizations will not be known to, seen by, or in any way benefit the OpenSSL project.
+
+Use these OpenSSL derived products at your own risk; these products have not been evaluated or tested by the OpenSSL project.
+
+
+Third Party OpenSSL Related Binary Distributions
+Product	Description	URL
+OpenSSL for Windows	Works with MSVC++, Builder 3/4/5, and MinGW. Comes in form of self-install executables.	https://slproweb.com/products/Win32OpenSSL.html
+OpenSSL for Windows	Pre-compiled Win32/64 libraries without external dependencies to the Microsoft Visual Studio Runtime DLLs, except for the system provided msvcrt.dll.	https://indy.fulgan.com/SSL/
+OpenSSL for Windows	Reproducible 1.1.x builds with latest MinGW-w64/GCC, 32/64-bit, static/dynamic libs and executable.	https://bintray.com/vszakats/generic/openssl
+OpenSSL for Solaris	Versions for Solaris 2.5 - 11 SPARC and X86	http://www.unixpackages.com/
+OpensSSL for Windows, Linux, OSX, Android	Pre-compiled packages at conan.io package manager:
+Windows x86/x86_64 (Visual Studio 10, 12, 14, 15)
+Linux x86/x86_64 (gcc 4.6, 4.8, 4.9, 5, 6, 7)
+OSx (Apple clang).
+Cross-building ready recipe: Linux ARM, Android.	https://www.conan.io
+https://bintray.com/conan-community/conan/OpenSSL%3Aconan
+OpenSSL for Windows	Pre-compiled Win32/64 1.0.2, 1.1.0 and 1.1.1 libraries without external dependencies, primarily built for François Piette's Internet Component Suite (ICS) for Embarcadero (Borland) Delphi and C++ development tools, but may be used for any Windows applications. The OpenSSL DLLs and EXE files are digitally code signed 'Open Source Developer, François PIETTE', so applications can self verify them for corruption.	http://wiki.overbyte.eu/wiki/index.php/ICS_Download
+OpenSSL for Windows	Pre-compiled Win32/x64 1.1.1 libraries with dependency on the Visual Studio 2019 runtime (binary-compatible with 2015+2017). Primarily built for FireDaemon Fusion, but may be used for any Windows application. The OpenSSL DLL and EXE files are digitally code signed 'FireDaemon Technologies Limited'.	https://kb.firedaemon.com/support/solutions/articles/4000121705
+Engines
+Some third parties provide OpenSSL compatible engines. As for the binaries above the following disclaimer applies:
+
+Important Disclaimer: The listing of these third party products does not imply any endorsement by the OpenSSL project, and these organizations are not affiliated in any way with OpenSSL other than by the reference to their independent web sites here. In particular any donations or payments to any of these organizations will not be known to, seen by, or in any way benefit the OpenSSL project.
+
+Third Party OpenSSL compatible engines
+Product	Description	URL
+Intel® QuickAssist Technology engine	Intel® QuickAssist Technology (http://www.intel.com/content/www/us/en/embedded/technology/quickassist/overview.html) provides acceleration for a number of cryptographic algorithms. QAT_engine adds support for Intel® QuickAssist Technology to OpenSSL-1.1.0 via the ENGINE framework. The definitive list of algorithms exposed into OpenSSL (a subset of those supported in the device) is defined on the associated github page.	https://github.com/01org/QAT_Engine
+ATECCX08 engine	Support for the Atmel ATECC508A (http://www.atmel.com/devices/ATECC508A.aspx) hardware to provide secure key storage, ECC cryptographic calculations for the ECC NIST P-256 curve, and FIPS certified hardware Random Number Generator.	https://github.com/AtmelCSO/cryptoauth-openssl-engine
+GOST engine	A reference implementation of the Russian GOST crypto algorithms for OpenSSL. The presence of this engine also enables the built-in OpenSSL support for GOST TLS ciphersuites. (Note: this engine is for OpenSSL version 1.1.0 and above. Previous versions of OpenSSL used a built-in GOST engine)	https://github.com/gost-engine/engine
+ISARA Radiate Solution Suite OpenSSL Connector	Commercially available engine and source code patch for OpenSSL 1.0.2 branch. The ISARA Radiate OpenSSL Connector lets you implement OpenSSL using quantum safe algorithms. ISARA Radiate (https://www.isara.com/isara-radiate/) gives you the cryptographic building blocks to create applications that will resist attacks by quantum computers.	https://www.isara.com/openssl/1/
+BEE2EVP engine	Implements the Belarusian national cryptography: symmetric and public-key encryption, MAC, AEAD, hashing, digital signature. Encapsulates the Bee2 core cryptographic library into OpenSSL using the EVP interface.	https://github.com/bcrypto/bee2evp

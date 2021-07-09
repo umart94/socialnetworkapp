@@ -1,0 +1,15 @@
+For the relationships between OpenSSL and FIPS 140-2, read this documentation.
+
+The OpenSSL FIPS Object Module is a specific subset of OpenSSL, API-compatible with OpenSSL, and provided as source code. That module has gone through the long and painful administrative process of obtaining a FIPS 140-2 validation. It has achieved the "overall level: 1" (see the validation certificate).
+
+The intent of FIPS 140-2 validation is to show, basically, that some level of "seriousness" was applied during the development. Validation cannot prove that there is no bug or vulnerability, but it can show that the developers applied proper methodologies which, hopefully, should avoid bugs and make the software conform to a specific set of target properties.
+
+Now, there are some caveats:
+
+In practice, the OpenSSL developers applied the same development methodologies for both the FIPS module, and "plain" OpenSSL. Both versions share a lot of code; the FIPS module is actually a subset of the normal library version. For the same functionalities, the plain OpenSSL should be no less secure than the FIPS module. (For functionalities which the plain OpenSSL offers but not the FIPS module, anything goes).
+
+The FIPS module is validated only insofar as you use it absolutely unchanged. If you modify the slightest character in the source code, you are no longer covered by the FIPS validation.
+
+The second point, in particular, implies that if a bug is found in "normal OpenSSL", and a bugfix is published, then that bugfix is not immediately imported into the FIPS module, because that would void its FIPSness. Therefore, it can be argued that the plain OpenSSL is in fact more secure than the FIPS module, since it is fixed much more quickly when holes are uncovered.
+
+Summary: if you do not target some sort of conformance to FIPS 140-2, use the normal OpenSSL.

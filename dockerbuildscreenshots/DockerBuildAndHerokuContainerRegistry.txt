@@ -1,0 +1,58 @@
+Heroku Container Registry Method
+
+building source code using VSCode.
+then run
+
+dotnet publish -c Release
+
+
+
+
+
+THEN We need to create the Visual Studio Project and Dockerfile
+if making from VSCode.. just open the csproj file in visual studio
+
+the project setting will be Output Console... change it from project settings to output -> Class Library..
+
+add docker support with Target OS Linux.
+afterwards Dockerfile should be in the folder containing csproj and the sln file. (vscode and visual studio)
+( we can either config paths in dockerfile.. or just paste dockerfile in the respective directory)
+
+
+Step1 Install Docker For Windows, Login to Docker, build the image using docker
+D:\dev\angular\angular\SocialAppHeroku\SocialApp.API>docker build -t socialapp.api .
+Sending build context to Docker daemon  2.928MB
+
+Step1b - docker tag <docker-image-name> registry.heroku.com/<heroku-app-name>/web
+
+
+
+Step2 - login to heroku.
+D:\dev\angular\angular\SocialAppHeroku\SocialApp.API>heroku login
+heroku: Press any key to open up the browser to login or q to exit:
+Logging in... done
+
+Step3 
+D:\dev\angular\angular\SocialAppHeroku\SocialApp.API>heroku container:login
+Login Succeeded
+
+
+Step4
+D:\dev\angular\angular\SocialAppHeroku\SocialApp.API>heroku container:push web -a NAME_OF_APP_CREATED_IN_HEROKU
+Your image has been successfully pushed. You can now release it with the 'container:release' command.
+
+
+Step5
+D:\dev\angular\angular\SocialAppHeroku\SocialApp.API>heroku container:release web -a NAME_OF_APP_CREATED_IN_HEROKU
+Releasing images web to NAME_OF_APP_CREATED_IN_HEROKU... done
+
+Issue #3: If you make a mistake in your Dockerfile or use ENTRYPOINT command instead of CMD with dynamic PORT assignment you will see errors and the heroku app will crash..
+
+for errors
+
+heroku logs -a NAME_OF_APP_CREATED_IN_HEROKU
+
+
+now we can open heroku app
+
+

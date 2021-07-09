@@ -1,0 +1,34 @@
+<!-- mt-5 is margins on a page mt means margin top... 5 is element of distance from top 6 different options
+they allow for different amounts of space -->
+<div class="container mt-5">
+    <div
+        *ngIf="!registerMode"
+        style="text-align: center;"
+    >
+        <h1>Find friends</h1>
+
+        <div class="text-center">
+            <button
+                class="btn btn-primary btn-lg mr-2"
+                (click)="registerToggle()"
+            >
+                Register
+            </button>
+            <button class="btn btn-info btn-lg">Learn more</button>
+        </div>
+    </div>
+
+    <!-- bootstrap grid made up of 12 columns
+    we are going to use 4 of them to show the register form -->
+    <div
+        *ngIf="registerMode"
+        class="container"
+    >
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <!-- square for input property and round bracket for output property call a method from home component -->
+                <app-register (cancelRegister)="cancelRegisterMode($event)"></app-register>
+            </div>
+        </div>
+    </div>
+</div>

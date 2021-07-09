@@ -1,0 +1,184 @@
+
+
+Step1 - Connect to MySQL root user
+
+C:\WINDOWS\system32>mysql -u root -P 3307 -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 8
+Server version: 5.5.5-10.4.11-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql>
+
+
+mysql> SHOW GLOBAL VARIABLES LIKE '%ssl%';
++---------------------+---------------+
+| Variable_name       | Value         |
++---------------------+---------------+
+| have_openssl        | NO            |
+| have_ssl            | DISABLED      |
+| ssl_ca              |               |
+| ssl_capath          |               |
+| ssl_cert            |               |
+| ssl_cipher          |               |
+| ssl_crl             |               |
+| ssl_crlpath         |               |
+| ssl_key             |               |
+| version_ssl_library | WolfSSL 4.1.0 |
++---------------------+---------------+
+10 rows in set (0.00 sec)
+
+
+
+now exit
+
+
+from cmd check mysql version
+C:\WINDOWS\system32>mysql -V
+mysql  Ver 8.0.20 for Win64 on x86_64 (MySQL Community Server - GPL)
+
+
+
+https://downloads.mariadb.org/mariadb/+releases/
+
+
+
+
+Typically, the binaries for MySQL server for Windows that you can download from the MySQL website, have been compiled with SSL support. To double check that this is the case, we can connect to our instance via mysql -uroot -p (in Windows, mysql.exe is located in C:\Program Files\MySQL\MySQL Server 5.7\bin) and run:
+
+mysql> show global variables like '%ssl%';
++---------------+----------+
+| Variable_name | Value    |
++---------------+----------+
+| have_openssl  | DISABLED |
+| have_ssl      | DISABLED |
+| ...           | ...      |
+Ok, so SSL is available but DISABLED for now (if it had a 'NO' in the value, SSL was not enabled for our binaries, we would need to look for new ones). Our purpose is to configure MySQL first so that it shows a 'YES' in those values.
+
+You can also see if SSL is being used for the current connection by issuing a status query:
+
+mysql> status
+--------------
+mysql  Ver 14.14 Distrib 5.7.12, for Win64 (x86_64)
+
+Connection id:          551
+Current database:
+Current user:           root@localhost
+SSL:                    Not in use
+Using delimiter:        ;
+Server version:         5.7.12-log MySQL Community Server (GPL)
+Protocol version:       10
+Connection:             localhost via TCP/IP
+Server characterset:    utf8
+Db     characterset:    utf8
+Client characterset:    cp850
+Conn.  characterset:    cp850
+TCP port:               3306
+Uptime:                 13 days 22 hours 23 min 24 sec
+(This will become handy when we enable SSL in the server, but want to still make sure that SSL is being used for a particular user/connection.)
+
+Now that we're inside this mysql console, let's create the user that will use the SSL mode (username is ssluser, password is sslpassword):
+
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'ssluser'@'localhost' IDENTIFIED BY 'sslpassword' REQUIRE SSL;
+mysql> FLUSH PRIVILEGES;
+The equivalent can also be done for an existing user, to force him to use SSL (and not allow her to connect if she doesn't), by issuing the following query:
+
+mysql> UPDATE mysql.user SET ssl_type = 'ANY' WHERE user = 'someUser';
+mysql> FLUSH PRIVILEGES;
+(And to get it back to allow him to connect without SSL would be: )
+
+mysql> UPDATE mysql.user SET ssl_type = '' WHERE user = 'someUser';
+mysql> FLUSH PRIVILEGES;
+Now you need to have OpenSSL installed/available on your machine. Many have this already, certainly most Linux anyway. For Windows, you can download it from here.
+
+Now that that’s out of the way, you're basically looking at a 6 step process, which needs to be run from a command line (cmd) from the folder where we installed OpenSSL (e.g. C:\OpenSSL-Win64\bin):
+
+Create the folder for our certificates:
+mkdir C:\mysqlCerts
+
+Set up the environment variable for OpenSSL configuration (because sadly it's not set up by default in Windows builds, at the time of this writing):
+set OPENSSL_CONF=c:\OpenSSL-Win64\bin\openssl.cfg
+
+Create CA Certificates (following 2 commands create 2 files: ca-cert.pem and ca-key.pem):
+openssl genrsa 2048 > "C:\mysqlCerts\ca-key.pem"
+
+openssl req -new -x509 -nodes -days 3600 -key "C:\mysqlCerts\ca-key.pem" > "C:\mysqlCerts\ca-cert.pem"
+
+Create Server Certificates (following 2 commands create 3 files: server-cert.pem, server-key.pem, and server-req.pem):
+openssl req -newkey rsa:2048 -days 3600 -nodes -keyout "C:\mysqlCerts\server-key.pem" > "C:\mysqlCerts\server-req.pem"
+
+openssl x509 -req -in "C:\mysqlCerts\server-req.pem" -days 3600 -CA "C:\mysqlCerts\ca-cert.pem" -CAkey "C:\mysqlCerts\ca-key.pem" -set_serial 01 > "C:\mysqlCerts\server-cert.pem"
+
+Create Client Certificates (following 2 commands create 3 files: client-cert.pem, client-key.pem, and client-req.pem):
+openssl req -newkey rsa:2048 -days 3600 -nodes -keyout "C:\mysqlCerts\client-key.pem" > "C:\mysqlCerts\client-req.pem"
+
+openssl x509 -req -in "C:\mysqlCerts\client-req.pem" -days 3600 -CA "C:\mysqlCerts\ca-cert.pem" -CAkey "C:\mysqlCerts\ca-key.pem" -set_serial 01 > "C:\mysqlCerts\client-cert.pem"
+
+Update MySQL's config file (in Windows, it's called my.ini, not my.cnf as in Linux, and not my-default.ini because the latter is a template), which normally lives in C:\ProgramData\MySQL\MySQL Server 5.7\ (note: ProgramData is a hidden folder), to include this under the [mysqld] section:
+Note: If you have \s in your path, you will need to replace it with \\s because mysqld will substitue the \s for a whitespace character which will break the path to your key. The extra backslash escapes the original backslash, leaving your path intact.
+
+ssl-ca     = "C:\mysqlCerts\ca-cert.pem"
+
+ssl-cert   = "C:\mysqlCerts\\server-cert.pem"
+
+ssl-key    = "C:\mysqlCerts\\server-key.pem"
+
+and restart mysql service/server.
+
+Now let's connect again via our normal user (not the ssluser) with mysql -uroot -p, and check our ssl variables:
+
+mysql> show global variables like '%ssl%';
++---------------+----------------------------------------+
+| Variable_name | Value                                  |
++---------------+----------------------------------------+
+| have_openssl  | YES                                    |
+| have_ssl      | YES                                    |
+| ssl_ca        | C:\mysqlCerts\ca-cert.pem              |
+| ssl_capath    |                                        |
+| ssl_cert      | C:\mysqlCerts\server-cert.pem          |
+| ssl_cipher    |                                        |
+| ssl_crl       |                                        |
+| ssl_crlpath   |                                        |
+| ssl_key       | C:\mysqlCerts\server-key.pem           |
++---------------+----------------------------------------+
+If you don't have something like the above, something hasn't worked well. Maybe you assigned a passphrase when creating the certificates/keys? If that's the case, MySQL cannot use those without the passphrase. We can remove it then, by issuing this openssl command:
+
+openssl rsa -in "C:\mysqlCerts\server-key.pem" -out "C:\mysqlCerts\server-key-ppless.pem"
+
+Then change my.ini again to point to this new -ppless.pem-suffixed file. Restart mysql again, connect again, and check that have_ssl is YES now. Is it? Double check by showing the status:
+
+mysql> status
+--------------
+mysql.exe  Ver 14.14 Distrib 5.7.12, for Win64 (x86_64)
+
+Connection id:          2
+Current database:
+Current user:           root@localhost
+SSL:                    Cipher in use is DHE-RSA-AES256-SHA
+Using delimiter:        ;
+Server version:         5.7.12-log MySQL Community Server (GPL)
+Protocol version:       10
+Connection:             localhost via TCP/IP
+Server characterset:    utf8
+Db     characterset:    utf8
+Client characterset:    cp850
+Conn.  characterset:    cp850
+TCP port:               3306
+Uptime:                 46 sec
+Now the SSL has something on it! Let's connect with our new ssluser then, now with the --ssl-mode flag:
+
+mysql.exe -ussluser -p --ssl-mode=REQUIRED
+If it connects, we're done.
+
+(But to double check, you can try to connect without SSL to see if it rejects your connection, this way:)
+
+mysql.exe -ussluser -p --ssl=0
+Now you should configure your app to use its connector via SSL. For example if you're using the .NET Connector, check the documentation here.

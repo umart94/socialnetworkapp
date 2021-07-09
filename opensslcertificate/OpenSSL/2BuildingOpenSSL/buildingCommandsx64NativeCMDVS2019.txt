@@ -1,0 +1,78 @@
+C:\Users\Intel\Desktop\openssl-master>cpan -i Text::Template
+C:\Users\Intel\Desktop\openssl-master>cpan -i Test::More
+
+
+No spaces in paths , use double quotes
+
+perl Configure VC-WIN64A --prefix="C:\Program Files\OpenSSL\DLL\x64\Release" --openssldir="C:\Program Files\OpenSSL\ssl"
+
+
+After this, run command:
+
+nmake
+
+
+
+
+Now run :
+nmake test
+
+
+
+now run:
+
+nmake install_sw
+
+
+This Was "SHARED BUILD"
+
+Now We Will Make Static Build:
+
+------------------------------ SHARED LIBRARY BUILD END ---------------------------------
+
+
+--------------------- STATIC LIBRARY BUILD START -----------------------------------
+run nmake clean
+
+perl Configure VC-WIN64A --prefix="C:\Program Files\OpenSSL\lib\x64\Release" --openssldir="C:\Program Files\OpenSSL\ssl" no-shared
+
+
+
+
+
+
+
+
+
+
+
+
+C:\Users\Intel\Desktop\openssl-master\openssl-master>perl Configure VC-WIN64A --prefix="C:\Program Files\OpenSSL\lib\x64\Release" --openssldir="C:\Program Files\OpenSSL\ssl" no-shared
+Configuring OpenSSL version 3.0.0-alpha6-dev for target VC-WIN64A
+Using os-specific seed configuration
+Creating configdata.pm
+Running configdata.pm
+Creating makefile
+
+**********************************************************************
+***                                                                ***
+***   OpenSSL has been successfully configured                     ***
+***                                                                ***
+***   If you encounter a problem while building, please open an    ***
+***   issue on GitHub <https://github.com/openssl/openssl/issues>  ***
+***   and include the output from the following command:           ***
+***                                                                ***
+***       perl configdata.pm --dump                                ***
+***                                                                ***
+***   (If you are new to OpenSSL, you might want to consult the    ***
+***   'Troubleshooting' section in the INSTALL.md file first)      ***
+***                                                                ***
+**********************************************************************
+
+
+
+run nmake
+nmake test
+
+nmake install_sw
+--------------------- STATIC LIBRARY BUILD END -----------------------------------

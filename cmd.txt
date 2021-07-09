@@ -1,0 +1,8 @@
+CMD CTRL+SHIFT+ENTER ( in run command )
+
+cd D:\dev\angular\angular\SocialApp\SocialApp-SPA
+cd D:\dev\angular\angular\SocialApp\SocialApp.API
+
+dotnet run
+dotnet watch run
+ng serve

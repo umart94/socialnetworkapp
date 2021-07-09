@@ -1,0 +1,343 @@
+ng build
+
+output files in www directory on api on root server
+Ahead of Time Compilation , Production Build
+swap database from sqlite to MySQL
+Publish To IIS
+Publish to Linux
+
+
+What we were using during the debugging and development of the angular app.
+Kestral Server
+Angular Live Server
+
+
+when we ng serve and dotnet run
+Angular Live Server uses the memory to run the files, not physical files.
+
+build app -> create physical files, publish , use the www root folder 
+api uses this folder for the static files (fonts, or anything else is published in www root folder)
+
+
+angular.json is the file where output is placed now by default.
+
+"options": {
+            "outputPath": "dist/SocialApp-SPA",
+
+this is the path where it will be published.
+we want to change it to the www root folder.
+
+change outputPath PROPERLY. one directory up.. and into "wwwroot" inside SocialApp.API. ( make note of the slashes and relative / absolute path.
+
+"outputPath": "../SocialApp.API/wwwroot"
+
+
+go to SPA root folder
+run with cmd admin level privilege.
+
+ng build.
+
+it generates all the js and html files.
+
+with links to js files inside them.. so now these are static files.
+
+//uses index.html file.
+app.UseDefaultFiles();
+//uses these generated static files
+app.UseStaticFiles();
+
+
+
+--- run again works
+
+but wont work on refresh.
+this is because the controllers use angular to handle the routes.
+we need to update code so that the code runs route requests in api as well.
+
+
+add fallback.cs
+
+angular still running in development mode.
+
+now we need to enable production mode.
+
+dev mode files are larger because they include the compiler files.
+
+--------------------------------------
+
+Bundling For Protection
+
+Bundling 
+our app is made up of a lot of files. these are bundled in js files. references and injected into index.html files.
+this improves performance.
+
+Minification
+minification removes whitespace
+
+Tree Shaking
+flags unused functions in the code
+uglify.js dead code algorithm removes excess code
+
+
+Output Hashing
+when client browsers download js
+this is static file, code updates then browser does not download updated file.
+hashes contents and appends hash to file name
+cache busting
+
+when we output files , they are appended with a hash, when we update and republish it the filename will be changed, so browser will always download this new updated file.
+
+
+AoT Compliation
+JIT Compilation is default
+
+ng serve
+ng build
+
+
+ng build --prod
+ahead of time ... compiles the app at build time.
+
+gives:
+fastter rendering
+fewer asynchronous requests.
+smaller framework download size.
+compiler is roughly half of angular itself.
+it reduces application size.
+
+
+so for reduced size and better performance use AoT compiler with : 
+ng build --prod
+
+detect template errors earlier
+better security ( no risky client side html and js)
+
+
+check if localhost:port e.g localhost:5000 is not being used anywhere
+
+
+now run ng build --prod
+
+my app size went from ~ 13MB to 2.39MB.
+
+
+ng build --prod --build-optimizer=false
+
+
+mysql -u root -P 3307 -p (LOL capital P is for Port and small p is for password)
+
+
+LOL .........
+The Administrative Roles tab includes the following roles:
+
+DBA: Grants the rights to perform all tasks.
+
+MaintenanceAdmin: Grants rights to maintain the server.
+
+ProcessAdmin: Grants rights to assess, monitor, and kill user processes.
+
+UserAdmin: Grants rights to create user logins and reset passwords.
+
+SecurityAdmin: Grants rights to manage logins and grant and revoke server privileges.
+
+MonitorAdmin: Grants the minimum rights to monitor the server.
+
+DBManager: Grants full rights on all databases.
+
+DBDesigner: Grants rights to create and reverse-engineer any database schema.
+
+ReplicationAdmin: Grants rights needed to set up and manage replication.
+
+BackupAdmin: Grants minimum rights required to back up any database.
+
+Custom: Lists other (custom) privileges that are assigned to the user account. This role is not available for all default accounts, such as root. If you select a user account and then select one or more privileges directly that are outside of any selected roles, the Custom role is added (and selected) to the list of roles.
+
+To remove all of the rights assigned to the selected user account, click Revoke All Privileges.
+
+
+
+
+IM DBA woohooo..
+CREATE USER 'user'@'hostname';
+GRANT ALL PRIVILEGES ON dbTest.* To 'user'@'hostname' IDENTIFIED BY 'password';
+
+
+All hosts.. LOLLLL.
+CREATE USER 'username'@'%';
+GRANT ALL PRIVILEGES ON dbTest.* To 'username'@'%' IDENTIFIED BY 'password';
+
+https://stackoverflow.com/questions/1720244/create-new-user-in-mysql-and-give-it-full-access-to-one-database
+
+GRANT ALL PRIVILEGES ON dbTest.* To 'username'@'%' IDENTIFIED BY 'password';
+------------------------------------
+
+
+Try this to create the user:
+
+CREATE USER 'user'@'hostname';
+
+CREATE DATABASE NameOfDatabase;
+
+
+
+Try this to give it access to the database dbTest:
+
+GRANT ALL PRIVILEGES ON SocialApp.* To 'user258'@'%' IDENTIFIED BY 'password';
+If you are running the code/site accessing MySQL on the same machine, hostname would be localhost.
+
+Now, the break down.
+
+GRANT - This is the command used to create users and grant rights to databases, tables, etc.
+
+ALL PRIVILEGES - This tells it the user will have all standard privileges. This does not include the privilege to use the GRANT command however.
+
+dbtest.* - This instructions MySQL to apply these rights for use in the entire dbtest database. You can replace the * with specific table names or store routines if you wish.
+
+TO 'user'@'hostname' - 'user' is the username of the user account you are creating. Note: You must have the single quotes in there. 'hostname' tells MySQL what hosts the user can connect from. If you only want it from the same machine, use localhost
+
+IDENTIFIED BY 'password' - As you would have guessed, this sets the password for that user.
+
+-----------------
+we'll be using Pomelo EF Core MYSQL. Provider.
+
+
+dotnet --version
+3.1.300
+
+Pomelo version (DB Provider must also be same)
+Install-Package Pomelo.EntityFrameworkCore.MySql -Version 3.1.1
+
+
+ Dependencies
+.NETStandard 2.0
+Microsoft.EntityFrameworkCore.Relational (>= 3.1.0)
+MySqlConnector (>= 0.61.0)
+Pomelo.JsonObject (>= 2.2.1)
+
+
+add package dependency
+dotnetcore, Aspnet core and pomelo database provider (EF Core)
+all versions must match.
+
+like 2.1 , 2.1 , 2.1
+
+------------------
+https://docs.microsoft.com/en-us/aspnet/core/fundamentals/environments?view=aspnetcore-3.1
+
+------------
+defaults to development if nothing is set.
+
+export ASPNETCORE_ENVIRONMENT=Production (mac)
+set ASPNETCORE_ENVIRONMENT=Production (windows)
+$Env:ASPNETCORE_ENVIRONMENT= "Production"
+
+
+
+type only set. to view all environment variables.
+
+Delete Migrations ( LOL )
+
+
+dotnet ef migrations add mysqlinitial
+Done. To undo this action, use 'ef migrations remove'
+
+---------------
+
+now we get the MySQL annotations in the migrations
+
+-------------------
+dotnet ef database update
+
+-------------------------------
+
+D:\dev\angular\angular\SocialApp\SocialApp.API>dotnet ef migrations add mysqlinitial
+Done. To undo this action, use 'ef migrations remove'
+
+D:\dev\angular\angular\SocialApp\SocialApp.API>dotnet ef database update
+Done.
+
+-------------
+
+to supress warnings
+services.AddDbContext<DataContext>(x => x.UseMySql(Configuration.GetConnectionString("DefaultConnection"))
+            .ConfigureWarnings(warnings => warnings.Ignore(CoreEventId.IncludeIgnoredWarning)));
+
+
+-----------
+
+make new website in IIS
+create hosts file configuration.
+
+
+-------------
+web.config file
+---------
+
+
+Install .Net Core Hosting Bundle
+ASPNETCORE Module
+this module creates REST Proxy between IIS and Kestrel Server.
+
+the runtime is already in the dotnet core sdk
+
+
+-----------------------
+D:\dev\angular\angular\SocialApp\SocialApp.API>dotnet publish -o ..\..\..\SocialAppPublish
+Microsoft (R) Build Engine version 16.6.0+5ff7b0c9e for .NET Core
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  SocialApp.API -> D:\dev\angular\angular\SocialApp\SocialApp.API\bin\Debug\netcoreapp2.1\SocialApp.API.dll
+  SocialApp.API -> D:\dev\angular\SocialAppPublish\
+
+---------------------------
+
+published files.
+
+
+----------------
+web.config file
+
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <location path="." inheritInChildApplications="false">
+    <system.webServer>
+      <handlers>
+        <add name="aspNetCore" path="*" verb="*" modules="AspNetCoreModule" resourceType="Unspecified" />
+      </handlers>
+      <aspNetCore processPath="dotnet" arguments=".\SocialApp.API.dll" stdoutLogEnabled="false" stdoutLogFile=".\logs\stdout" />
+    </system.webServer>
+  </location>
+</configuration>
+
+-----------------------------
+modules="AspNetCoreModule" will enable link between IIS and Kestrel... IIS to act as proxy between
+
+---------------
+
+we need the dotnet runtime hosting server apps version
+
+after installing that, reset iis
+
+refresh page
+it should work
+
+
+----------
+HTTP Error 500.21 - Internal Server Error Handler "aspNetCore" has a bad module "AspNetCoreModuleV2" in its module list
+in webconfig
+Change AspNetCoreModuleV2 to AspNetCoreModule inside web.config.
+or
+Change AspNetCoreModule to AspNetCoreModuleV2 inside web.config.
+
+wrt to your version.
+
+----
+now ping
+it works
+now test it.
+
+------
+we can add SSL Sertificates in SSL.
+we need a proper domain name, buy valid certificates and properly configure that server then.

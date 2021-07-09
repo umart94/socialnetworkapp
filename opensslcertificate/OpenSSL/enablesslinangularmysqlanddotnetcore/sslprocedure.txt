@@ -1,0 +1,76 @@
+First, we need to enable SSL in MySQL (i am using v8)
+Through MySQL Workbench, generate SSL Files.
+afterwards copy them to your directory.
+
+then
+go to : 
+
+C:\ProgramData\MySQL\MySQL Server 8.0
+
+this is the location for my.ini file.
+
+in my.ini, in the client portion add :
+
+client
+ssl-ca=C:\certs\ca-cert.pem
+ssl-cert=C:\certs\client-cert.pem
+ssl-key=C:\certs\client-key.pem
+
+and in the mysqld portion, add
+
+mysqld
+ssl-ca=C:\certs\ca-cert.pem
+ssl-cert=C:\certs\\server-cert.pem
+ssl-key=C:\certs\\server-key.pem
+
+in appsettings.json , for MySQL we need this connection String :
+"ConnectionStrings": "DefaultConnection": "Server=localhost; Database=socialApp; Uid=root; Pwd=root; Port=3306; SslMode=Required;"
+And
+ "https_port": 5001
+
+
+
+in launchSettings set "applicationUrl": "https://localhost:5001"
+
+in Startup.cs file, add these development services.
+ services.AddHsts
+    services.AddHttpsRedirection
+
+add these lines to configuration method
+ app.UseHsts();
+ app.UseHttpsRedirection();
+
+in package.json set start script to "start": "ng serve --ssl true"
+
+After we create the MySQL user that requires SSL connection, grant privileges and then we Restart the mysqld.exe using default my.ini file, which we edited above.
+You can stop the MySQL server by executing this command:
+
+C:\> "C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqladmin" -u root shutdown
+
+
+
+run mysqld --defaults-file="path-to-ini/my.ini" --console
+
+from console so
+we have
+mysqld --defaults-file="C:\ProgramData\MySQL\MySQL Server 8.0\my.ini" --console
+
+For DOTNETCORE:
+from app root path run
+dotnet dev-certs https
+dotnet dev-certs https --trust
+dotnet dev-certs https --clean (in case there was issue in installing certificate)
+
+after adding certificates for the angular app, create the ssl folder inside angular app, and run the angular app using
+
+ng serve --ssl true
+
+
+finally for the dotnetcore api, 
+run dotnet run , and the url is https://localhost:5001
+
+for angular in ssl mode, the command is
+ng serve --ssl true , and the url is https://localhost:4200
+
+afterwards add the self-signed certificate / proceed to localhost in browser 
+this is because the certificate is self-signed 

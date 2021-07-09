@@ -1,0 +1,5 @@
+.vscode
+SocialApp.API/bin
+SocialApp.API/obj
+SocialApp.API/*.db
+SocialApp.API/appsettings.json

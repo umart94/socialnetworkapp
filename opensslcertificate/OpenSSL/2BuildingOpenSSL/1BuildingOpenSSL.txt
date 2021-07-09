@@ -1,0 +1,1347 @@
+C:\Users\Intel\Desktop\openssl-master>cpan -i Text::Template
+Loading internal logger. Log::Log4perl recommended for better logging
+CPAN: CPAN::SQLite loaded ok (v0.217)
+CPAN: LWP::UserAgent loaded ok (v6.43)
+Fetching with LWP:
+http://cpan.strawberryperl.com/authors/01mailrc.txt.gz
+CPAN: YAML::XS loaded ok (v0.81)
+Fetching with LWP:
+http://cpan.strawberryperl.com/modules/02packages.details.txt.gz
+Fetching with LWP:
+http://cpan.strawberryperl.com/modules/03modlist.data.gz
+Creating database file ... Done!
+Running install for module 'Text::Template'
+Fetching with LWP:
+http://cpan.strawberryperl.com/authors/id/M/MS/MSCHOUT/Text-Template-1.59.tar.gz
+CPAN: Digest::SHA loaded ok (v6.02)
+Fetching with LWP:
+HASH(0x55fd6c0)authors/id/M/MS/MSCHOUT/CHECKSUMS
+Fetching with LWP:
+HASH(0x55fd6c0)authors/id/M/MS/MSCHOUT/CHECKSUMS.gz
+Fetching with LWP:
+http://cpan.strawberryperl.com/authors/id/M/MS/MSCHOUT/CHECKSUMS
+CPAN: Compress::Zlib loaded ok (v2.093)
+Checksum for C:\STRAWB~1\cpan\sources\authors\id\M\MS\MSCHOUT\Text-Template-1.59.tar.gz ok
+CPAN: Archive::Tar loaded ok (v2.36)
+CPAN: CPAN::Meta::Requirements loaded ok (v2.140)
+CPAN: Parse::CPAN::Meta loaded ok (v2.150010)
+CPAN: CPAN::Meta loaded ok (v2.150010)
+CPAN: Module::CoreList loaded ok (v5.20200314)
+Configuring M/MS/MSCHOUT/Text-Template-1.59.tar.gz with Makefile.PL
+Checking if your kit is complete...
+Looks good
+Warning: prerequisite Test::More::UTF8 0 not found.
+Generating a gmake-style Makefile
+Writing Makefile for Text::Template
+Writing MYMETA.yml and MYMETA.json
+  MSCHOUT/Text-Template-1.59.tar.gz
+  C:\Strawberry\perl\bin\perl.exe Makefile.PL -- OK
+Running make for M/MS/MSCHOUT/Text-Template-1.59.tar.gz
+---- Unsatisfied dependencies detected during ----
+----     MSCHOUT/Text-Template-1.59.tar.gz    ----
+    Test::More::UTF8 [build_requires]
+Running install for module 'Test::More::UTF8'
+Fetching with LWP:
+http://cpan.strawberryperl.com/authors/id/M/MO/MONS/Test-More-UTF8-0.05.tar.gz
+Fetching with LWP:
+HASH(0x617a080)authors/id/M/MO/MONS/CHECKSUMS
+Fetching with LWP:
+HASH(0x617a080)authors/id/M/MO/MONS/CHECKSUMS.gz
+Fetching with LWP:
+http://cpan.strawberryperl.com/authors/id/M/MO/MONS/CHECKSUMS
+Checksum for C:\STRAWB~1\cpan\sources\authors\id\M\MO\MONS\Test-More-UTF8-0.05.tar.gz ok
+Configuring M/MO/MONS/Test-More-UTF8-0.05.tar.gz with Makefile.PL
+Checking if your kit is complete...
+Looks good
+Generating a gmake-style Makefile
+Writing Makefile for Test::More::UTF8
+Writing MYMETA.yml and MYMETA.json
+  MONS/Test-More-UTF8-0.05.tar.gz
+  C:\Strawberry\perl\bin\perl.exe Makefile.PL -- OK
+Running make for M/MO/MONS/Test-More-UTF8-0.05.tar.gz
+cp lib/Test/More/UTF8.pm blib\lib\Test\More\UTF8.pm
+  MONS/Test-More-UTF8-0.05.tar.gz
+  C:\STRAWB~1\c\bin\gmake.exe -- OK
+Running make test for MONS/Test-More-UTF8-0.05.tar.gz
+"C:\Strawberry\perl\bin\perl.exe" "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness(0, 'blib\lib', 'blib\arch')" t/*.t
+t/00-load.t ....... 1/1 # Testing Test::More::UTF8 0.05, Perl 5.030002, C:\Strawberry\perl\bin\perl.exe
+t/00-load.t ....... ok
+t/01-usage.t ...... # ╨░
+t/01-usage.t ...... ok
+t/02-usage.t ...... # ╨░
+t/02-usage.t ...... ok
+t/03-usage.t ...... # ╨░
+t/03-usage.t ...... ok
+t/pod-coverage.t .. skipped: Test::Pod::Coverage 1.08 required for testing POD coverage
+t/pod.t ........... ok
+All tests successful.
+Files=6, Tests=14,  1 wallclock secs ( 0.05 usr +  0.00 sys =  0.05 CPU)
+Result: PASS
+  MONS/Test-More-UTF8-0.05.tar.gz
+  C:\STRAWB~1\c\bin\gmake.exe test -- OK
+Running make install for MONS/Test-More-UTF8-0.05.tar.gz
+Installing C:\STRAWB~1\perl\site\lib\Test\More\UTF8.pm
+Appending installation info to C:\STRAWB~1\perl\lib/perllocal.pod
+  MONS/Test-More-UTF8-0.05.tar.gz
+  C:\STRAWB~1\c\bin\gmake.exe install UNINST=1 -- OK
+  MSCHOUT/Text-Template-1.59.tar.gz
+  Has already been unwrapped into directory C:\STRAWB~1\cpan\build\Text-Template-1.59-0
+  MSCHOUT/Text-Template-1.59.tar.gz
+  Has already been prepared
+Running make for M/MS/MSCHOUT/Text-Template-1.59.tar.gz
+cp lib/Text/Template/Preprocess.pm blib\lib\Text\Template\Preprocess.pm
+cp lib/Text/Template.pm blib\lib\Text\Template.pm
+  MSCHOUT/Text-Template-1.59.tar.gz
+  C:\STRAWB~1\c\bin\gmake.exe -- OK
+Running make test for MSCHOUT/Text-Template-1.59.tar.gz
+"C:\Strawberry\perl\bin\perl.exe" "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness(0, 'blib\lib', 'blib\arch')" t/*.t
+t/author-pod-syntax.t .. skipped: these tests are for testing by the author
+t/author-signature.t ... skipped: these tests are for testing by the author
+t/basic.t .............. ok
+t/broken.t ............. ok
+t/delimiters.t ......... ok
+t/error.t .............. ok
+t/exported.t ........... ok
+t/hash.t ............... ok
+t/inline-comment.t ..... ok
+t/nested-tags.t ........ ok
+t/ofh.t ................ ok
+t/out.t ................ ok
+t/prepend.t ............ ok
+t/preprocess.t ......... ok
+t/rt29928.t ............ ok
+t/safe.t ............... ok
+t/safe2.t .............. ok
+t/safe3.t .............. ok
+t/strict.t ............. ok
+t/taint.t .............. ok
+t/template-encoding.t .. ok
+t/warnings.t ........... ok
+All tests successful.
+Files=22, Tests=184,  2 wallclock secs ( 0.09 usr +  0.06 sys =  0.16 CPU)
+Result: PASS
+  MSCHOUT/Text-Template-1.59.tar.gz
+  C:\STRAWB~1\c\bin\gmake.exe test -- OK
+Running make install for MSCHOUT/Text-Template-1.59.tar.gz
+Installing C:\STRAWB~1\perl\site\lib\Text\Template.pm
+Installing C:\STRAWB~1\perl\site\lib\Text\Template\Preprocess.pm
+Appending installation info to C:\STRAWB~1\perl\lib/perllocal.pod
+  MSCHOUT/Text-Template-1.59.tar.gz
+  C:\STRAWB~1\c\bin\gmake.exe install UNINST=1 -- OK
+
+
+
+
+
+
+C:\Users\Intel\Desktop\openssl-master>cpan -i Test::More
+Loading internal logger. Log::Log4perl recommended for better logging
+CPAN: CPAN::SQLite loaded ok (v0.217)
+Database was generated on Thu, 23 Jul 2020 07:30:29 GMT
+Running install for module 'Test::More'
+CPAN: LWP::UserAgent loaded ok (v6.43)
+Fetching with LWP:
+http://cpan.strawberryperl.com/authors/id/E/EX/EXODIST/Test-Simple-1.302175.tar.gz
+CPAN: YAML::XS loaded ok (v0.81)
+CPAN: Digest::SHA loaded ok (v6.02)
+Fetching with LWP:
+HASH(0x559fe48)authors/id/E/EX/EXODIST/CHECKSUMS
+Fetching with LWP:
+HASH(0x559fe48)authors/id/E/EX/EXODIST/CHECKSUMS.gz
+Fetching with LWP:
+http://cpan.strawberryperl.com/authors/id/E/EX/EXODIST/CHECKSUMS
+CPAN: Compress::Zlib loaded ok (v2.093)
+Checksum for C:\STRAWB~1\cpan\sources\authors\id\E\EX\EXODIST\Test-Simple-1.302175.tar.gz ok
+CPAN: Archive::Tar loaded ok (v2.36)
+CPAN: CPAN::Meta::Requirements loaded ok (v2.140)
+CPAN: Parse::CPAN::Meta loaded ok (v2.150010)
+CPAN: CPAN::Meta loaded ok (v2.150010)
+CPAN: Module::CoreList loaded ok (v5.20200314)
+Configuring E/EX/EXODIST/Test-Simple-1.302175.tar.gz with Makefile.PL
+Checking if your kit is complete...
+Looks good
+Generating a gmake-style Makefile
+Writing Makefile for Test::Simple
+Writing MYMETA.yml and MYMETA.json
+  EXODIST/Test-Simple-1.302175.tar.gz
+  C:\Strawberry\perl\bin\perl.exe Makefile.PL -- OK
+Running make for E/EX/EXODIST/Test-Simple-1.302175.tar.gz
+cp lib/Test/Builder/IO/Scalar.pm blib\lib\Test\Builder\IO\Scalar.pm
+cp lib/Test2/API/Stack.pm blib\lib\Test2\API\Stack.pm
+cp lib/Test2.pm blib\lib\Test2.pm
+cp lib/Test/Tester/Delegate.pm blib\lib\Test\Tester\Delegate.pm
+cp lib/Test/use/ok.pm blib\lib\Test\use\ok.pm
+cp lib/Test2/Event.pm blib\lib\Test2\Event.pm
+cp lib/Test2/Event/Bail.pm blib\lib\Test2\Event\Bail.pm
+cp lib/Test2/API/Breakage.pm blib\lib\Test2\API\Breakage.pm
+cp lib/Test/Tester.pm blib\lib\Test\Tester.pm
+cp lib/Test/More.pm blib\lib\Test\More.pm
+cp lib/Test/Simple.pm blib\lib\Test\Simple.pm
+cp lib/Test/Tester/CaptureRunner.pm blib\lib\Test\Tester\CaptureRunner.pm
+cp lib/Test/Builder/Tester.pm blib\lib\Test\Builder\Tester.pm
+cp lib/Test2/API/Context.pm blib\lib\Test2\API\Context.pm
+cp lib/Test/Tutorial.pod blib\lib\Test\Tutorial.pod
+cp lib/Test/Builder/TodoDiag.pm blib\lib\Test\Builder\TodoDiag.pm
+cp lib/Test/Builder/Formatter.pm blib\lib\Test\Builder\Formatter.pm
+cp lib/Test/Tester/Capture.pm blib\lib\Test\Tester\Capture.pm
+cp lib/Test2/API/Instance.pm blib\lib\Test2\API\Instance.pm
+cp lib/Test/Builder/Tester/Color.pm blib\lib\Test\Builder\Tester\Color.pm
+cp lib/Test/Builder/Module.pm blib\lib\Test\Builder\Module.pm
+cp lib/Test/Builder.pm blib\lib\Test\Builder.pm
+cp lib/Test2/API.pm blib\lib\Test2\API.pm
+cp lib/Test2/EventFacet/Amnesty.pm blib\lib\Test2\EventFacet\Amnesty.pm
+cp lib/Test2/Event/Exception.pm blib\lib\Test2\Event\Exception.pm
+cp lib/Test2/Event/Encoding.pm blib\lib\Test2\Event\Encoding.pm
+cp lib/Test2/Event/Pass.pm blib\lib\Test2\Event\Pass.pm
+cp lib/Test2/Event/TAP/Version.pm blib\lib\Test2\Event\TAP\Version.pm
+cp lib/Test2/Event/Fail.pm blib\lib\Test2\Event\Fail.pm
+cp lib/Test2/Event/Ok.pm blib\lib\Test2\Event\Ok.pm
+cp lib/Test2/Event/Waiting.pm blib\lib\Test2\Event\Waiting.pm
+cp lib/Test2/EventFacet/Hub.pm blib\lib\Test2\EventFacet\Hub.pm
+cp lib/Test2/Event/Subtest.pm blib\lib\Test2\Event\Subtest.pm
+cp lib/Test2/Event/Generic.pm blib\lib\Test2\Event\Generic.pm
+cp lib/Test2/Event/Plan.pm blib\lib\Test2\Event\Plan.pm
+cp lib/Test2/Event/Note.pm blib\lib\Test2\Event\Note.pm
+cp lib/Test2/EventFacet/About.pm blib\lib\Test2\EventFacet\About.pm
+cp lib/Test2/EventFacet/Assert.pm blib\lib\Test2\EventFacet\Assert.pm
+cp lib/Test2/EventFacet.pm blib\lib\Test2\EventFacet.pm
+cp lib/Test2/Event/V2.pm blib\lib\Test2\Event\V2.pm
+cp lib/Test2/EventFacet/Error.pm blib\lib\Test2\EventFacet\Error.pm
+cp lib/Test2/Event/Diag.pm blib\lib\Test2\Event\Diag.pm
+cp lib/Test2/EventFacet/Control.pm blib\lib\Test2\EventFacet\Control.pm
+cp lib/Test2/Event/Skip.pm blib\lib\Test2\Event\Skip.pm
+cp lib/Test2/IPC.pm blib\lib\Test2\IPC.pm
+cp lib/Test2/Transition.pod blib\lib\Test2\Transition.pod
+cp lib/Test2/EventFacet/Render.pm blib\lib\Test2\EventFacet\Render.pm
+cp lib/Test2/EventFacet/Info/Table.pm blib\lib\Test2\EventFacet\Info\Table.pm
+cp lib/Test2/Tools/Tiny.pm blib\lib\Test2\Tools\Tiny.pm
+cp lib/Test2/EventFacet/Trace.pm blib\lib\Test2\EventFacet\Trace.pm
+cp lib/Test2/Util.pm blib\lib\Test2\Util.pm
+cp lib/Test2/IPC/Driver.pm blib\lib\Test2\IPC\Driver.pm
+cp lib/Test2/Formatter/TAP.pm blib\lib\Test2\Formatter\TAP.pm
+cp lib/Test2/EventFacet/Parent.pm blib\lib\Test2\EventFacet\Parent.pm
+cp lib/Test2/Hub.pm blib\lib\Test2\Hub.pm
+cp lib/Test2/Formatter.pm blib\lib\Test2\Formatter.pm
+cp lib/Test2/EventFacet/Info.pm blib\lib\Test2\EventFacet\Info.pm
+cp lib/Test2/Hub/Interceptor.pm blib\lib\Test2\Hub\Interceptor.pm
+cp lib/Test2/EventFacet/Plan.pm blib\lib\Test2\EventFacet\Plan.pm
+cp lib/Test2/EventFacet/Meta.pm blib\lib\Test2\EventFacet\Meta.pm
+cp lib/Test2/Hub/Subtest.pm blib\lib\Test2\Hub\Subtest.pm
+cp lib/Test2/Util/ExternalMeta.pm blib\lib\Test2\Util\ExternalMeta.pm
+cp lib/Test2/Hub/Interceptor/Terminator.pm blib\lib\Test2\Hub\Interceptor\Terminator.pm
+cp lib/Test2/IPC/Driver/Files.pm blib\lib\Test2\IPC\Driver\Files.pm
+cp lib/Test2/Util/Facets2Legacy.pm blib\lib\Test2\Util\Facets2Legacy.pm
+cp lib/Test2/Util/Trace.pm blib\lib\Test2\Util\Trace.pm
+cp lib/ok.pm blib\lib\ok.pm
+cp lib/Test2/Util/HashBase.pm blib\lib\Test2\Util\HashBase.pm
+  EXODIST/Test-Simple-1.302175.tar.gz
+  C:\STRAWB~1\c\bin\gmake.exe -- OK
+Running make test for EXODIST/Test-Simple-1.302175.tar.gz
+"C:\Strawberry\perl\bin\perl.exe" "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness(0, 'blib\lib', 'blib\arch')" t/*.t t/Legacy/*.t t/Legacy/Bugs/*.t t/Legacy/Builder/*.t t/Legacy/Regression/*.t t/Legacy/Simple/*.t t/Legacy/Test2/*.t t/Legacy/Tester/*.t t/Legacy/subtest/*.t t/Legacy_And_Test2/*.t t/Test2/acceptance/*.t t/Test2/behavior/*.t t/Test2/legacy/*.t t/Test2/modules/*.t t/Test2/modules/API/*.t t/Test2/modules/Event/*.t t/Test2/modules/Event/TAP/*.t t/Test2/modules/EventFacet/*.t t/Test2/modules/Formatter/*.t t/Test2/modules/Hub/*.t t/Test2/modules/Hub/Interceptor/*.t t/Test2/modules/IPC/*.t t/Test2/modules/IPC/Driver/*.t t/Test2/modules/Tools/*.t t/Test2/modules/Util/*.t t/Test2/regression/*.t t/regression/*.t
+t/00-report.t .................................. 1/?
+# DIAGNOSTICS INFO IN CASE OF FAILURE:
+
+# Perl: 5.030002
+
+# CAPABILITIES:
+# CAN_FORK         Yes
+# CAN_REALLY_FORK  No
+# CAN_THREAD       Yes
+
+# DEPENDENCIES:
+# Carp          1.50
+# File::Spec    3.78
+# File::Temp    0.2309
+# PerlIO        1.10
+# Scalar::Util  1.54
+# Storable      3.15
+# Test2         1.302175
+# overload      1.30
+# threads       2.22
+# utf8          1.22
+t/00-report.t .................................. ok
+t/00compile.t .................................. ok
+t/HashBase.t ................................... ok
+t/Legacy/00test_harness_check.t ................ ok
+t/Legacy/01-basic.t ............................ ok
+t/Legacy/478-cmp_ok_hash.t ..................... ok
+t/Legacy/auto.t ................................ ok
+t/Legacy/bad_plan.t ............................ ok
+t/Legacy/bail_out.t ............................ ok
+t/Legacy/BEGIN_require_ok.t .................... ok
+t/Legacy/BEGIN_use_ok.t ........................ ok
+t/Legacy/buffer.t .............................. ok
+t/Legacy/Bugs/600.t ............................ ok
+t/Legacy/Bugs/629.t ............................ ok
+t/Legacy/Builder/Builder.t ..................... ok
+t/Legacy/Builder/carp.t ........................ ok
+t/Legacy/Builder/create.t ...................... ok
+t/Legacy/Builder/current_test.t ................ ok
+t/Legacy/Builder/current_test_without_plan.t ... ok
+t/Legacy/Builder/details.t ..................... ok
+t/Legacy/Builder/done_testing.t ................ ok
+t/Legacy/Builder/done_testing_double.t ......... ok
+t/Legacy/Builder/done_testing_plan_mismatch.t .. ok
+t/Legacy/Builder/done_testing_with_no_plan.t ... ok
+t/Legacy/Builder/done_testing_with_number.t .... ok
+t/Legacy/Builder/done_testing_with_plan.t ...... ok
+t/Legacy/Builder/fork_with_new_stdout.t ........ ok
+t/Legacy/Builder/has_plan.t .................... ok
+t/Legacy/Builder/has_plan2.t ................... ok
+t/Legacy/Builder/is_fh.t ....................... ok
+t/Legacy/Builder/is_passing.t .................. ok
+t/Legacy/Builder/maybe_regex.t ................. ok
+t/Legacy/Builder/no_diag.t ..................... ok
+t/Legacy/Builder/no_ending.t ................... ok
+t/Legacy/Builder/no_header.t ................... ok
+t/Legacy/Builder/no_plan_at_all.t .............. ok
+t/Legacy/Builder/ok_obj.t ...................... ok
+t/Legacy/Builder/output.t ...................... ok
+t/Legacy/Builder/reset.t ....................... ok
+t/Legacy/Builder/reset_outputs.t ............... ok
+t/Legacy/Builder/try.t ......................... ok
+t/Legacy/c_flag.t .............................. ok
+t/Legacy/capture.t ............................. ok
+t/Legacy/check_tests.t ......................... ok
+t/Legacy/circular_data.t ....................... ok
+t/Legacy/cmp_ok.t .............................. ok
+t/Legacy/depth.t ............................... ok
+t/Legacy/diag.t ................................ ok
+t/Legacy/died.t ................................ ok
+t/Legacy/dont_overwrite_die_handler.t .......... ok
+t/Legacy/eq_set.t .............................. ok
+t/Legacy/exit.t ................................ ok
+t/Legacy/explain.t ............................. ok
+t/Legacy/explain_err_vars.t .................... ok
+t/Legacy/extra.t ............................... ok
+t/Legacy/extra_one.t ........................... ok
+t/Legacy/fail-like.t ........................... ok
+t/Legacy/fail-more.t ........................... ok
+t/Legacy/fail.t ................................ ok
+t/Legacy/fail_one.t ............................ ok
+t/Legacy/filehandles.t ......................... ok
+t/Legacy/fork.t ................................ ok
+t/Legacy/harness_active.t ...................... ok
+t/Legacy/import.t .............................. ok
+t/Legacy/is_deeply_dne_bug.t ................... ok
+t/Legacy/is_deeply_fail.t ...................... ok
+t/Legacy/is_deeply_with_threads.t .............. skipped: many perls have broken threads.  Enable with AUTHOR_TESTING.
+t/Legacy/missing.t ............................. ok
+t/Legacy/More.t ................................ ok
+t/Legacy/new_ok.t .............................. ok
+t/Legacy/no_log_results.t ...................... ok
+t/Legacy/no_plan.t ............................. ok
+t/Legacy/no_tests.t ............................ ok
+t/Legacy/note.t ................................ ok
+t/Legacy/overload.t ............................ ok
+t/Legacy/overload_threads.t .................... ok
+t/Legacy/plan.t ................................ ok
+t/Legacy/plan_bad.t ............................ ok
+t/Legacy/plan_is_noplan.t ...................... ok
+t/Legacy/plan_no_plan.t ........................ ok
+t/Legacy/plan_shouldnt_import.t ................ ok
+t/Legacy/plan_skip_all.t ....................... skipped: Just testing plan & skip_all
+t/Legacy/Regression/637.t ...................... skipped: many perls have broken threads.  Enable with AUTHOR_TESTING.
+t/Legacy/Regression/683_thread_todo.t .......... ok
+t/Legacy/Regression/6_cmp_ok.t ................. ok
+t/Legacy/Regression/736_use_ok.t ............... ok
+t/Legacy/Regression/789-read-only.t ............ skipped: AUTHOR_TESTING not enabled
+t/Legacy/require_ok.t .......................... ok
+t/Legacy/run_test.t ............................ ok
+t/Legacy/simple.t .............................. ok
+t/Legacy/Simple/load.t ......................... ok
+t/Legacy/skip.t ................................ ok
+t/Legacy/skipall.t ............................. ok
+t/Legacy/strays.t .............................. skipped: not completed
+t/Legacy/subtest/args.t ........................ ok
+t/Legacy/subtest/bail_out.t .................... ok
+t/Legacy/subtest/basic.t ....................... ok
+t/Legacy/subtest/callback.t .................... ok
+t/Legacy/subtest/die.t ......................... ok
+t/Legacy/subtest/do.t .......................... ok
+t/Legacy/subtest/events.t ...................... ok
+t/Legacy/subtest/fork.t ........................ ok
+t/Legacy/subtest/implicit_done.t ............... ok
+t/Legacy/subtest/line_numbers.t ................ ok
+t/Legacy/subtest/plan.t ........................ ok
+t/Legacy/subtest/predicate.t ................... ok
+t/Legacy/subtest/singleton.t ................... ok
+t/Legacy/subtest/threads.t ..................... ok
+t/Legacy/subtest/todo.t ........................ ok
+t/Legacy/subtest/wstat.t ....................... ok
+t/Legacy/tbm_doesnt_set_exported_to.t .......... ok
+t/Legacy/Test2/Subtest.t ....................... ok
+t/Legacy/Tester/tbt_01basic.t .................. ok
+t/Legacy/Tester/tbt_02fhrestore.t .............. ok
+t/Legacy/Tester/tbt_03die.t .................... ok
+t/Legacy/Tester/tbt_04line_num.t ............... ok
+t/Legacy/Tester/tbt_05faildiag.t ............... ok
+t/Legacy/Tester/tbt_06errormess.t .............. ok
+t/Legacy/Tester/tbt_07args.t ................... ok
+t/Legacy/Tester/tbt_08subtest.t ................ ok
+t/Legacy/Tester/tbt_09do.t ..................... ok
+t/Legacy/thread_taint.t ........................ ok
+t/Legacy/threads.t ............................. ok
+t/Legacy/todo.t ................................ ok
+t/Legacy/undef.t ............................... ok
+t/Legacy/use_ok.t .............................. ok
+t/Legacy/useing.t .............................. ok
+t/Legacy/utf8.t ................................ ok
+t/Legacy/versions.t ............................ ok
+t/Legacy_And_Test2/builder_loaded_late.t ....... ok
+t/Legacy_And_Test2/diag_event_on_ok.t .......... ok
+t/Legacy_And_Test2/hidden_warnings.t ........... ok
+t/Legacy_And_Test2/preload_diag_note.t ......... ok
+t/Legacy_And_Test2/thread_init_warning.t ....... ok
+t/regression/642_persistent_end.t .............. ok
+t/regression/662-tbt-no-plan.t ................. ok
+t/regression/684-nested_todo_diag.t ............ ok
+t/regression/694_note_diag_return_values.t ..... ok
+t/regression/696-intercept_skip_all.t .......... ok
+t/regression/721-nested-streamed-subtest.t ..... ok
+t/regression/757-reset_in_subtest.t ............ ok
+t/regression/812-todo.t ........................ ok
+t/regression/817-subtest-todo.t ................ ok
+t/regression/buffered_subtest_plan_buffered.t .. ok
+t/regression/builder_does_not_init.t ........... ok
+t/regression/errors_facet.t .................... ok
+t/regression/fork_first.t ...................... ok
+t/regression/inherit_trace.t ................... ok
+t/regression/no_name_in_subtest.t .............. ok
+t/regression/todo_and_facets.t ................. ok
+t/Test2/acceptance/try_it_done_testing.t ....... ok
+t/Test2/acceptance/try_it_fork.t ............... skipped: System cannot fork
+t/Test2/acceptance/try_it_no_plan.t ............ ok
+t/Test2/acceptance/try_it_plan.t ............... ok
+t/Test2/acceptance/try_it_skip.t ............... skipped: testing skip all
+t/Test2/acceptance/try_it_threads.t ............ ok
+t/Test2/acceptance/try_it_todo.t ............... ok
+t/Test2/behavior/disable_ipc_a.t ............... ok
+t/Test2/behavior/disable_ipc_b.t ............... ok
+t/Test2/behavior/disable_ipc_c.t ............... ok
+t/Test2/behavior/disable_ipc_d.t ............... ok
+t/Test2/behavior/err_var.t ..................... ok
+t/Test2/behavior/Formatter.t ................... ok
+t/Test2/behavior/init_croak.t .................. ok
+t/Test2/behavior/intercept.t ................... ok
+t/Test2/behavior/ipc_wait_timeout.t ............ ok
+t/Test2/behavior/nested_context_exception.t .... ok
+t/Test2/behavior/no_load_api.t ................. ok
+t/Test2/behavior/run_subtest_inherit.t ......... ok
+t/Test2/behavior/special_names.t ............... ok
+t/Test2/behavior/subtest_bailout.t ............. ok
+t/Test2/behavior/Subtest_buffer_formatter.t .... ok
+t/Test2/behavior/Subtest_callback.t ............ ok
+t/Test2/behavior/Subtest_events.t .............. ok
+t/Test2/behavior/Subtest_plan.t ................ ok
+t/Test2/behavior/Subtest_todo.t ................ ok
+t/Test2/behavior/Taint.t ....................... ok
+t/Test2/behavior/trace_signature.t ............. ok
+t/Test2/behavior/uuid.t ........................ ok
+t/Test2/legacy/TAP.t ........................... ok
+t/Test2/modules/API.t .......................... ok
+t/Test2/modules/API/Breakage.t ................. ok
+t/Test2/modules/API/Context.t .................. ok
+t/Test2/modules/API/Instance.t ................. ok
+t/Test2/modules/API/Stack.t .................... ok
+t/Test2/modules/Event.t ........................ ok
+t/Test2/modules/Event/Bail.t ................... ok
+t/Test2/modules/Event/Diag.t ................... ok
+t/Test2/modules/Event/Encoding.t ............... ok
+t/Test2/modules/Event/Exception.t .............. ok
+t/Test2/modules/Event/Fail.t ................... ok
+t/Test2/modules/Event/Generic.t ................ ok
+t/Test2/modules/Event/Note.t ................... ok
+t/Test2/modules/Event/Ok.t ..................... ok
+t/Test2/modules/Event/Pass.t ................... ok
+t/Test2/modules/Event/Plan.t ................... ok
+t/Test2/modules/Event/Skip.t ................... ok
+t/Test2/modules/Event/Subtest.t ................ ok
+t/Test2/modules/Event/TAP/Version.t ............ ok
+t/Test2/modules/Event/V2.t ..................... ok
+t/Test2/modules/Event/Waiting.t ................ ok
+t/Test2/modules/EventFacet.t ................... ok
+t/Test2/modules/EventFacet/About.t ............. ok
+t/Test2/modules/EventFacet/Amnesty.t ........... ok
+t/Test2/modules/EventFacet/Assert.t ............ ok
+t/Test2/modules/EventFacet/Control.t ........... ok
+t/Test2/modules/EventFacet/Error.t ............. ok
+t/Test2/modules/EventFacet/Info.t .............. ok
+t/Test2/modules/EventFacet/Meta.t .............. ok
+t/Test2/modules/EventFacet/Parent.t ............ ok
+t/Test2/modules/EventFacet/Plan.t .............. ok
+t/Test2/modules/EventFacet/Trace.t ............. ok
+t/Test2/modules/Formatter/TAP.t ................ ok
+t/Test2/modules/Hub.t .......................... ok
+t/Test2/modules/Hub/Interceptor.t .............. ok
+t/Test2/modules/Hub/Interceptor/Terminator.t ... ok
+t/Test2/modules/Hub/Subtest.t .................. ok
+t/Test2/modules/IPC.t .......................... ok
+t/Test2/modules/IPC/Driver.t ................... ok
+t/Test2/modules/IPC/Driver/Files.t ............. ok
+t/Test2/modules/Tools/Tiny.t ................... ok
+t/Test2/modules/Util.t ......................... ok
+t/Test2/modules/Util/ExternalMeta.t ............ ok
+t/Test2/modules/Util/Facets2Legacy.t ........... ok
+t/Test2/modules/Util/Trace.t ................... ok
+t/Test2/regression/693_ipc_ordering.t .......... ok
+t/Test2/regression/746-forking-subtest.t ....... ok
+t/Test2/regression/gh_16.t ..................... skipped: Crazy test, only run on 5.20+, or when AUTHOR_TESTING is set
+t/Test2/regression/ipc_files_abort_exit.t ...... skipped: Set AUTHOR_TESTING to run this test
+t/zzz-check-breaks.t ........................... ok
+All tests successful.
+Files=230, Tests=2617, 33 wallclock secs ( 0.59 usr +  0.23 sys =  0.83 CPU)
+Result: PASS
+  EXODIST/Test-Simple-1.302175.tar.gz
+  C:\STRAWB~1\c\bin\gmake.exe test -- OK
+Running make install for EXODIST/Test-Simple-1.302175.tar.gz
+Installing C:\STRAWB~1\perl\site\lib\ok.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2.pm
+Installing C:\STRAWB~1\perl\site\lib\Test\Builder.pm
+Installing C:\STRAWB~1\perl\site\lib\Test\More.pm
+Installing C:\STRAWB~1\perl\site\lib\Test\Simple.pm
+Installing C:\STRAWB~1\perl\site\lib\Test\Tester.pm
+Installing C:\STRAWB~1\perl\site\lib\Test\Tutorial.pod
+Installing C:\STRAWB~1\perl\site\lib\Test\Builder\Formatter.pm
+Installing C:\STRAWB~1\perl\site\lib\Test\Builder\Module.pm
+Installing C:\STRAWB~1\perl\site\lib\Test\Builder\Tester.pm
+Installing C:\STRAWB~1\perl\site\lib\Test\Builder\TodoDiag.pm
+Installing C:\STRAWB~1\perl\site\lib\Test\Builder\IO\Scalar.pm
+Installing C:\STRAWB~1\perl\site\lib\Test\Builder\Tester\Color.pm
+Installing C:\STRAWB~1\perl\site\lib\Test\Tester\Capture.pm
+Installing C:\STRAWB~1\perl\site\lib\Test\Tester\CaptureRunner.pm
+Installing C:\STRAWB~1\perl\site\lib\Test\Tester\Delegate.pm
+Installing C:\STRAWB~1\perl\site\lib\Test\use\ok.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\API.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\Event.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\EventFacet.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\Formatter.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\Hub.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\IPC.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\Transition.pod
+Installing C:\STRAWB~1\perl\site\lib\Test2\Util.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\API\Breakage.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\API\Context.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\API\Instance.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\API\Stack.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\Event\Bail.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\Event\Diag.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\Event\Encoding.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\Event\Exception.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\Event\Fail.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\Event\Generic.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\Event\Note.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\Event\Ok.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\Event\Pass.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\Event\Plan.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\Event\Skip.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\Event\Subtest.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\Event\V2.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\Event\Waiting.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\Event\TAP\Version.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\EventFacet\About.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\EventFacet\Amnesty.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\EventFacet\Assert.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\EventFacet\Control.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\EventFacet\Error.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\EventFacet\Hub.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\EventFacet\Info.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\EventFacet\Meta.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\EventFacet\Parent.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\EventFacet\Plan.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\EventFacet\Render.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\EventFacet\Trace.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\EventFacet\Info\Table.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\Formatter\TAP.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\Hub\Interceptor.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\Hub\Subtest.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\Hub\Interceptor\Terminator.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\IPC\Driver.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\IPC\Driver\Files.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\Tools\Tiny.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\Util\ExternalMeta.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\Util\Facets2Legacy.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\Util\HashBase.pm
+Installing C:\STRAWB~1\perl\site\lib\Test2\Util\Trace.pm
+Appending installation info to C:\STRAWB~1\perl\lib/perllocal.pod
+  EXODIST/Test-Simple-1.302175.tar.gz
+  C:\STRAWB~1\c\bin\gmake.exe install UNINST=1 -- OK
+
+
+
+
+
+
+
+
+
+C:\Users\Intel\Desktop\openssl-master\openssl-master>perl Configure VC-WIN64A --prefix="C:\Program Files\OpenSSL\DLL\x64\Release" --openssldir="C:\Program Files\OpenSSL\ssl"
+Configuring OpenSSL version 3.0.0-alpha6-dev for target VC-WIN64A
+Using os-specific seed configuration
+Creating configdata.pm
+Running configdata.pm
+Creating makefile
+
+**********************************************************************
+***                                                                ***
+***   OpenSSL has been successfully configured                     ***
+***                                                                ***
+***   If you encounter a problem while building, please open an    ***
+***   issue on GitHub <https://github.com/openssl/openssl/issues>  ***
+***   and include the output from the following command:           ***
+***                                                                ***
+***       perl configdata.pm --dump                                ***
+***                                                                ***
+***   (If you are new to OpenSSL, you might want to consult the    ***
+***   'Troubleshooting' section in the INSTALL.md file first)      ***
+***                                                                ***
+**********************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+nmake output will be long, afterwards we will see this
+
+
+        "C:\Strawberry\perl\bin\perl.exe" "-I." -Mconfigdata "util\dofile.pl"  "-omakefile" "apps\CA.pl.in" > "apps\CA.pl"
+        "C:\Strawberry\perl\bin\perl.exe" "-I." -Mconfigdata "util\dofile.pl"  "-omakefile" "apps\tsget.in" > "apps\tsget.pl"
+        "C:\Strawberry\perl\bin\perl.exe" "-I." -Mconfigdata "util\dofile.pl"  "-omakefile" "tools\c_rehash.in" > "tools\c_rehash.pl"
+
+
+
+
+
+
+Now run :
+nmake test
+
+
+
+now run:
+
+nmake install_sw
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C:\Users\Intel\Desktop\openssl-master\openssl-master>nmake install_sw
+
+Microsoft (R) Program Maintenance Utility Version 14.26.28805.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+        "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.26.28801\bin\HostX64\x64\nmake.exe" /                   depend && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.26.28801\bin\HostX64\x64\nmake.exe" /                   _build_libs
+
+Microsoft (R) Program Maintenance Utility Version 14.26.28805.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Microsoft (R) Program Maintenance Utility Version 14.26.28805.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+*** Installing runtime libraries
+created directory `C:/Program Files/OpenSSL/DLL/x64/Release/bin'
+Copying: libcrypto-3.dll to C:/Program Files/OpenSSL/DLL/x64/Release/bin/libcrypto-3.dll
+Copying: libssl-3.dll to C:/Program Files/OpenSSL/DLL/x64/Release/bin/libssl-3.dll
+Copying: libcrypto-3.pdb to C:/Program Files/OpenSSL/DLL/x64/Release/bin/libcrypto-3.pdb
+Copying: libssl-3.pdb to C:/Program Files/OpenSSL/DLL/x64/Release/bin/libssl-3.pdb
+*** Installing development files
+created directory `C:/Program Files/OpenSSL/DLL/x64/Release/include'
+created directory `C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl'
+Copying: ./include/openssl/aes.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/aes.h
+Copying: ./include/openssl/asn1.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/asn1.h
+Copying: ./include/openssl/asn1_mac.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/asn1_mac.h
+Copying: ./include/openssl/asn1err.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/asn1err.h
+Copying: ./include/openssl/asn1t.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/asn1t.h
+Copying: ./include/openssl/async.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/async.h
+Copying: ./include/openssl/asyncerr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/asyncerr.h
+Copying: ./include/openssl/bio.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/bio.h
+Copying: ./include/openssl/bioerr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/bioerr.h
+Copying: ./include/openssl/blowfish.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/blowfish.h
+Copying: ./include/openssl/bn.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/bn.h
+Copying: ./include/openssl/bnerr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/bnerr.h
+Copying: ./include/openssl/buffer.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/buffer.h
+Copying: ./include/openssl/buffererr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/buffererr.h
+Copying: ./include/openssl/camellia.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/camellia.h
+Copying: ./include/openssl/cast.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/cast.h
+Copying: ./include/openssl/cmac.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/cmac.h
+Copying: ./include/openssl/cmp.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/cmp.h
+Copying: ./include/openssl/cmp_util.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/cmp_util.h
+Copying: ./include/openssl/cmperr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/cmperr.h
+Copying: ./include/openssl/cms.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/cms.h
+Copying: ./include/openssl/cmserr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/cmserr.h
+Copying: ./include/openssl/comp.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/comp.h
+Copying: ./include/openssl/comperr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/comperr.h
+Copying: ./include/openssl/conf.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/conf.h
+Copying: ./include/openssl/conf_api.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/conf_api.h
+Copying: ./include/openssl/conferr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/conferr.h
+Copying: ./include/openssl/configuration.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/configuration.h
+Copying: ./include/openssl/core.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/core.h
+Copying: ./include/openssl/core_dispatch.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/core_dispatch.h
+Copying: ./include/openssl/core_names.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/core_names.h
+Copying: ./include/openssl/crmf.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/crmf.h
+Copying: ./include/openssl/crmferr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/crmferr.h
+Copying: ./include/openssl/crypto.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/crypto.h
+Copying: ./include/openssl/cryptoerr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/cryptoerr.h
+Copying: ./include/openssl/ct.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/ct.h
+Copying: ./include/openssl/cterr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/cterr.h
+Copying: ./include/openssl/des.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/des.h
+Copying: ./include/openssl/dh.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/dh.h
+Copying: ./include/openssl/dherr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/dherr.h
+Copying: ./include/openssl/dsa.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/dsa.h
+Copying: ./include/openssl/dsaerr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/dsaerr.h
+Copying: ./include/openssl/dtls1.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/dtls1.h
+Copying: ./include/openssl/e_os2.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/e_os2.h
+Copying: ./include/openssl/ebcdic.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/ebcdic.h
+Copying: ./include/openssl/ec.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/ec.h
+Copying: ./include/openssl/ecdh.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/ecdh.h
+Copying: ./include/openssl/ecdsa.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/ecdsa.h
+Copying: ./include/openssl/ecerr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/ecerr.h
+Copying: ./include/openssl/engine.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/engine.h
+Copying: ./include/openssl/engineerr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/engineerr.h
+Copying: ./include/openssl/err.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/err.h
+Copying: ./include/openssl/ess.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/ess.h
+Copying: ./include/openssl/esserr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/esserr.h
+Copying: ./include/openssl/evp.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/evp.h
+Copying: ./include/openssl/evperr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/evperr.h
+Copying: ./include/openssl/fips_names.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/fips_names.h
+Copying: ./include/openssl/fipskey.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/fipskey.h
+Copying: ./include/openssl/hmac.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/hmac.h
+Copying: ./include/openssl/http.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/http.h
+Copying: ./include/openssl/httperr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/httperr.h
+Copying: ./include/openssl/idea.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/idea.h
+Copying: ./include/openssl/kdf.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/kdf.h
+Copying: ./include/openssl/kdferr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/kdferr.h
+Copying: ./include/openssl/lhash.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/lhash.h
+Copying: ./include/openssl/macros.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/macros.h
+Copying: ./include/openssl/md2.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/md2.h
+Copying: ./include/openssl/md4.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/md4.h
+Copying: ./include/openssl/md5.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/md5.h
+Copying: ./include/openssl/mdc2.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/mdc2.h
+Copying: ./include/openssl/modes.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/modes.h
+Copying: ./include/openssl/obj_mac.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/obj_mac.h
+Copying: ./include/openssl/objects.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/objects.h
+Copying: ./include/openssl/objectserr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/objectserr.h
+Copying: ./include/openssl/ocsp.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/ocsp.h
+Copying: ./include/openssl/ocsperr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/ocsperr.h
+Copying: ./include/openssl/opensslconf.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/opensslconf.h
+Copying: ./include/openssl/opensslv.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/opensslv.h
+Copying: ./include/openssl/ossl_typ.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/ossl_typ.h
+Copying: ./include/openssl/param_build.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/param_build.h
+Copying: ./include/openssl/params.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/params.h
+Copying: ./include/openssl/pem.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/pem.h
+Copying: ./include/openssl/pem2.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/pem2.h
+Copying: ./include/openssl/pemerr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/pemerr.h
+Copying: ./include/openssl/pkcs12.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/pkcs12.h
+Copying: ./include/openssl/pkcs12err.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/pkcs12err.h
+Copying: ./include/openssl/pkcs7.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/pkcs7.h
+Copying: ./include/openssl/pkcs7err.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/pkcs7err.h
+Copying: ./include/openssl/provider.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/provider.h
+Copying: ./include/openssl/rand.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/rand.h
+Copying: ./include/openssl/rand_drbg.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/rand_drbg.h
+Copying: ./include/openssl/randerr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/randerr.h
+Copying: ./include/openssl/rc2.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/rc2.h
+Copying: ./include/openssl/rc4.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/rc4.h
+Copying: ./include/openssl/rc5.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/rc5.h
+Copying: ./include/openssl/ripemd.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/ripemd.h
+Copying: ./include/openssl/rsa.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/rsa.h
+Copying: ./include/openssl/rsaerr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/rsaerr.h
+Copying: ./include/openssl/safestack.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/safestack.h
+Copying: ./include/openssl/seed.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/seed.h
+Copying: ./include/openssl/self_test.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/self_test.h
+Copying: ./include/openssl/serializer.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/serializer.h
+Copying: ./include/openssl/serializererr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/serializererr.h
+Copying: ./include/openssl/sha.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/sha.h
+Copying: ./include/openssl/srp.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/srp.h
+Copying: ./include/openssl/srtp.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/srtp.h
+Copying: ./include/openssl/ssl.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/ssl.h
+Copying: ./include/openssl/ssl2.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/ssl2.h
+Copying: ./include/openssl/ssl3.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/ssl3.h
+Copying: ./include/openssl/sslerr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/sslerr.h
+Copying: ./include/openssl/stack.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/stack.h
+Copying: ./include/openssl/store.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/store.h
+Copying: ./include/openssl/storeerr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/storeerr.h
+Copying: ./include/openssl/symhacks.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/symhacks.h
+Copying: ./include/openssl/tls1.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/tls1.h
+Copying: ./include/openssl/trace.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/trace.h
+Copying: ./include/openssl/ts.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/ts.h
+Copying: ./include/openssl/tserr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/tserr.h
+Copying: ./include/openssl/txt_db.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/txt_db.h
+Copying: ./include/openssl/types.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/types.h
+Copying: ./include/openssl/ui.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/ui.h
+Copying: ./include/openssl/uierr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/uierr.h
+Copying: ./include/openssl/whrlpool.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/whrlpool.h
+Copying: ./include/openssl/x509.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/x509.h
+Copying: ./include/openssl/x509_vfy.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/x509_vfy.h
+Copying: ./include/openssl/x509err.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/x509err.h
+Copying: ./include/openssl/x509v3.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/x509v3.h
+Copying: ./include/openssl/x509v3err.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/x509v3err.h
+Copying: ./include/openssl/__DECC_INCLUDE_EPILOGUE.H to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/__DECC_INCLUDE_EPILOGUE.H
+Copying: ./include/openssl/__DECC_INCLUDE_PROLOGUE.H to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/__DECC_INCLUDE_PROLOGUE.H
+Copying: ./include/openssl/aes.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/aes.h
+Copying: ./include/openssl/asn1.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/asn1.h
+Copying: ./include/openssl/asn1_mac.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/asn1_mac.h
+Copying: ./include/openssl/asn1err.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/asn1err.h
+Copying: ./include/openssl/asn1t.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/asn1t.h
+Copying: ./include/openssl/async.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/async.h
+Copying: ./include/openssl/asyncerr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/asyncerr.h
+Copying: ./include/openssl/bio.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/bio.h
+Copying: ./include/openssl/bioerr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/bioerr.h
+Copying: ./include/openssl/blowfish.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/blowfish.h
+Copying: ./include/openssl/bn.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/bn.h
+Copying: ./include/openssl/bnerr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/bnerr.h
+Copying: ./include/openssl/buffer.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/buffer.h
+Copying: ./include/openssl/buffererr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/buffererr.h
+Copying: ./include/openssl/camellia.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/camellia.h
+Copying: ./include/openssl/cast.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/cast.h
+Copying: ./include/openssl/cmac.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/cmac.h
+Copying: ./include/openssl/cmp.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/cmp.h
+Copying: ./include/openssl/cmp_util.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/cmp_util.h
+Copying: ./include/openssl/cmperr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/cmperr.h
+Copying: ./include/openssl/cms.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/cms.h
+Copying: ./include/openssl/cmserr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/cmserr.h
+Copying: ./include/openssl/comp.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/comp.h
+Copying: ./include/openssl/comperr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/comperr.h
+Copying: ./include/openssl/conf.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/conf.h
+Copying: ./include/openssl/conf_api.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/conf_api.h
+Copying: ./include/openssl/conferr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/conferr.h
+Copying: ./include/openssl/configuration.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/configuration.h
+Copying: ./include/openssl/core.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/core.h
+Copying: ./include/openssl/core_dispatch.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/core_dispatch.h
+Copying: ./include/openssl/core_names.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/core_names.h
+Copying: ./include/openssl/crmf.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/crmf.h
+Copying: ./include/openssl/crmferr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/crmferr.h
+Copying: ./include/openssl/crypto.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/crypto.h
+Copying: ./include/openssl/cryptoerr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/cryptoerr.h
+Copying: ./include/openssl/ct.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/ct.h
+Copying: ./include/openssl/cterr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/cterr.h
+Copying: ./include/openssl/des.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/des.h
+Copying: ./include/openssl/dh.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/dh.h
+Copying: ./include/openssl/dherr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/dherr.h
+Copying: ./include/openssl/dsa.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/dsa.h
+Copying: ./include/openssl/dsaerr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/dsaerr.h
+Copying: ./include/openssl/dtls1.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/dtls1.h
+Copying: ./include/openssl/e_os2.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/e_os2.h
+Copying: ./include/openssl/ebcdic.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/ebcdic.h
+Copying: ./include/openssl/ec.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/ec.h
+Copying: ./include/openssl/ecdh.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/ecdh.h
+Copying: ./include/openssl/ecdsa.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/ecdsa.h
+Copying: ./include/openssl/ecerr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/ecerr.h
+Copying: ./include/openssl/engine.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/engine.h
+Copying: ./include/openssl/engineerr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/engineerr.h
+Copying: ./include/openssl/err.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/err.h
+Copying: ./include/openssl/ess.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/ess.h
+Copying: ./include/openssl/esserr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/esserr.h
+Copying: ./include/openssl/evp.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/evp.h
+Copying: ./include/openssl/evperr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/evperr.h
+Copying: ./include/openssl/fips_names.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/fips_names.h
+Copying: ./include/openssl/fipskey.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/fipskey.h
+Copying: ./include/openssl/hmac.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/hmac.h
+Copying: ./include/openssl/http.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/http.h
+Copying: ./include/openssl/httperr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/httperr.h
+Copying: ./include/openssl/idea.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/idea.h
+Copying: ./include/openssl/kdf.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/kdf.h
+Copying: ./include/openssl/kdferr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/kdferr.h
+Copying: ./include/openssl/lhash.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/lhash.h
+Copying: ./include/openssl/macros.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/macros.h
+Copying: ./include/openssl/md2.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/md2.h
+Copying: ./include/openssl/md4.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/md4.h
+Copying: ./include/openssl/md5.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/md5.h
+Copying: ./include/openssl/mdc2.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/mdc2.h
+Copying: ./include/openssl/modes.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/modes.h
+Copying: ./include/openssl/obj_mac.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/obj_mac.h
+Copying: ./include/openssl/objects.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/objects.h
+Copying: ./include/openssl/objectserr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/objectserr.h
+Copying: ./include/openssl/ocsp.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/ocsp.h
+Copying: ./include/openssl/ocsperr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/ocsperr.h
+Copying: ./include/openssl/opensslconf.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/opensslconf.h
+Copying: ./include/openssl/opensslv.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/opensslv.h
+Copying: ./include/openssl/ossl_typ.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/ossl_typ.h
+Copying: ./include/openssl/param_build.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/param_build.h
+Copying: ./include/openssl/params.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/params.h
+Copying: ./include/openssl/pem.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/pem.h
+Copying: ./include/openssl/pem2.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/pem2.h
+Copying: ./include/openssl/pemerr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/pemerr.h
+Copying: ./include/openssl/pkcs12.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/pkcs12.h
+Copying: ./include/openssl/pkcs12err.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/pkcs12err.h
+Copying: ./include/openssl/pkcs7.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/pkcs7.h
+Copying: ./include/openssl/pkcs7err.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/pkcs7err.h
+Copying: ./include/openssl/provider.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/provider.h
+Copying: ./include/openssl/rand.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/rand.h
+Copying: ./include/openssl/rand_drbg.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/rand_drbg.h
+Copying: ./include/openssl/randerr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/randerr.h
+Copying: ./include/openssl/rc2.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/rc2.h
+Copying: ./include/openssl/rc4.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/rc4.h
+Copying: ./include/openssl/rc5.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/rc5.h
+Copying: ./include/openssl/ripemd.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/ripemd.h
+Copying: ./include/openssl/rsa.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/rsa.h
+Copying: ./include/openssl/rsaerr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/rsaerr.h
+Copying: ./include/openssl/safestack.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/safestack.h
+Copying: ./include/openssl/seed.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/seed.h
+Copying: ./include/openssl/self_test.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/self_test.h
+Copying: ./include/openssl/serializer.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/serializer.h
+Copying: ./include/openssl/serializererr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/serializererr.h
+Copying: ./include/openssl/sha.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/sha.h
+Copying: ./include/openssl/srp.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/srp.h
+Copying: ./include/openssl/srtp.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/srtp.h
+Copying: ./include/openssl/ssl.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/ssl.h
+Copying: ./include/openssl/ssl2.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/ssl2.h
+Copying: ./include/openssl/ssl3.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/ssl3.h
+Copying: ./include/openssl/sslerr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/sslerr.h
+Copying: ./include/openssl/stack.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/stack.h
+Copying: ./include/openssl/store.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/store.h
+Copying: ./include/openssl/storeerr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/storeerr.h
+Copying: ./include/openssl/symhacks.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/symhacks.h
+Copying: ./include/openssl/tls1.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/tls1.h
+Copying: ./include/openssl/trace.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/trace.h
+Copying: ./include/openssl/ts.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/ts.h
+Copying: ./include/openssl/tserr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/tserr.h
+Copying: ./include/openssl/txt_db.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/txt_db.h
+Copying: ./include/openssl/types.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/types.h
+Copying: ./include/openssl/ui.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/ui.h
+Copying: ./include/openssl/uierr.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/uierr.h
+Copying: ./include/openssl/whrlpool.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/whrlpool.h
+Copying: ./include/openssl/x509.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/x509.h
+Copying: ./include/openssl/x509_vfy.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/x509_vfy.h
+Copying: ./include/openssl/x509err.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/x509err.h
+Copying: ./include/openssl/x509v3.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/x509v3.h
+Copying: ./include/openssl/x509v3err.h to C:/Program Files/OpenSSL/DLL/x64/Release/include/openssl/x509v3err.h
+created directory `C:/Program Files/OpenSSL/DLL/x64/Release/lib'
+Copying: libcrypto.lib to C:/Program Files/OpenSSL/DLL/x64/Release/lib/libcrypto.lib
+Copying: libssl.lib to C:/Program Files/OpenSSL/DLL/x64/Release/lib/libssl.lib
+        "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.26.28801\bin\HostX64\x64\nmake.exe" /                   depend && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.26.28801\bin\HostX64\x64\nmake.exe" /                   _build_modules
+
+Microsoft (R) Program Maintenance Utility Version 14.26.28805.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Microsoft (R) Program Maintenance Utility Version 14.26.28805.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+*** Installing engines
+created directory `C:/Program Files/OpenSSL/DLL/x64/Release/lib/engines-3'
+Copying: engines//capi.dll to C:/Program Files/OpenSSL/DLL/x64/Release/lib/engines-3/capi.dll
+Copying: engines//padlock.dll to C:/Program Files/OpenSSL/DLL/x64/Release/lib/engines-3/padlock.dll
+Copying: engines//capi.pdb to C:/Program Files/OpenSSL/DLL/x64/Release/lib/engines-3/capi.pdb
+Copying: engines//padlock.pdb to C:/Program Files/OpenSSL/DLL/x64/Release/lib/engines-3/padlock.pdb
+*** Installing modules
+created directory `C:/Program Files/OpenSSL/DLL/x64/Release/lib/ossl-modules'
+Copying: providers/fips.dll to C:/Program Files/OpenSSL/DLL/x64/Release/lib/ossl-modules/fips.dll
+Copying: providers/legacy.dll to C:/Program Files/OpenSSL/DLL/x64/Release/lib/ossl-modules/legacy.dll
+Copying: providers//fips.pdb to C:/Program Files/OpenSSL/DLL/x64/Release/lib/ossl-modules/fips.pdb
+Copying: providers//legacy.pdb to C:/Program Files/OpenSSL/DLL/x64/Release/lib/ossl-modules/legacy.pdb
+        "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.26.28801\bin\HostX64\x64\nmake.exe" /                   depend && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.26.28801\bin\HostX64\x64\nmake.exe" /                   _build_programs
+
+Microsoft (R) Program Maintenance Utility Version 14.26.28805.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Microsoft (R) Program Maintenance Utility Version 14.26.28805.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+*** Installing runtime programs
+Copying: apps//openssl.exe to C:/Program Files/OpenSSL/DLL/x64/Release/bin/openssl.exe
+Copying: apps//openssl.pdb to C:/Program Files/OpenSSL/DLL/x64/Release/bin/openssl.pdb
+Copying: tools//c_rehash.pl to C:/Program Files/OpenSSL/DLL/x64/Release/bin/c_rehash.pl
+
+C:\Users\Intel\Desktop\openssl-master\openssl-master>
+
+
+
+
+
+THIS WAS PROCESS TO BUILD A SHARED LIBARY
+
+-------------------------------------------------------- SHARED LIBRARY BUILD END ---------------------------------------
+
+
+
+
+
+
+Shared libraries are .so (or in Windows .dll, or in OS X .dylib) files. All the code relating to the library is in this file, and it is referenced by programs using it at run-time. A program using a shared library only makes reference to the code that it uses in the shared library.
+
+Static libraries are .a (or in Windows .lib) files. All the code relating to the library is in this file, and it is directly linked into the program at compile time. A program using a static library takes copies of the code that it uses from the static library and makes it part of the program. [Windows also has .lib files which are used to reference .dll files, but they act the same way as the first one].
+
+There are advantages and disadvantages in each method:
+
+Shared libraries reduce the amount of code that is duplicated in each program that makes use of the library, keeping the binaries small. It also allows you to replace the shared object with one that is functionally equivalent, but may have added performance benefits without needing to recompile the program that makes use of it. Shared libraries will, however have a small additional cost for the execution of the functions as well as a run-time loading cost as all the symbols in the library need to be connected to the things they use. Additionally, shared libraries can be loaded into an application at run-time, which is the general mechanism for implementing binary plug-in systems.
+
+Static libraries increase the overall size of the binary, but it means that you don't need to carry along a copy of the library that is being used. As the code is connected at compile time there are not any additional run-time loading costs. The code is simply there.
+
+Personally, I prefer shared libraries, but use static libraries when needing to ensure that the binary does not have many external dependencies that may be difficult to meet, such as specific versions of the C++ standard library or specific versions of the Boost C++ library.
+
+
+--------------------------------------------------------- STATIC LIBRARY BUILD START -------------------------------------------------------------------------------------
+continue from before
+
+run nmake clean
+
+
+
+C:\Users\Intel\Desktop\openssl-master\openssl-master>perl Configure VC-WIN64A --prefix="C:\Program Files\OpenSSL\lib\x64\Release" --openssldir="C:\Program Files\OpenSSL\ssl" no-shared
+Configuring OpenSSL version 3.0.0-alpha6-dev for target VC-WIN64A
+Using os-specific seed configuration
+Creating configdata.pm
+Running configdata.pm
+Creating makefile
+
+**********************************************************************
+***                                                                ***
+***   OpenSSL has been successfully configured                     ***
+***                                                                ***
+***   If you encounter a problem while building, please open an    ***
+***   issue on GitHub <https://github.com/openssl/openssl/issues>  ***
+***   and include the output from the following command:           ***
+***                                                                ***
+***       perl configdata.pm --dump                                ***
+***                                                                ***
+***   (If you are new to OpenSSL, you might want to consult the    ***
+***   'Troubleshooting' section in the INSTALL.md file first)      ***
+***                                                                ***
+**********************************************************************
+
+run nmake
+
+nmake test
+
+nmake install_sw
+
+
+
+
+--------------------------------------------------------- STATIC LIBRARY BUILD END -------------------------------------------------------------------------------------
+C:\Users\Intel\Desktop\openssl-master\openssl-master>nmake install_sw
+
+Microsoft (R) Program Maintenance Utility Version 14.26.28805.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+        "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.26.28801\bin\HostX64\x64\nmake.exe" /                   depend && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.26.28801\bin\HostX64\x64\nmake.exe" /                   _build_libs
+
+Microsoft (R) Program Maintenance Utility Version 14.26.28805.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Microsoft (R) Program Maintenance Utility Version 14.26.28805.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+*** Installing runtime libraries
+created directory `C:/Program Files/OpenSSL/lib/x64/Release/bin'
+*** Installing development files
+created directory `C:/Program Files/OpenSSL/lib/x64/Release/include'
+created directory `C:/Program Files/OpenSSL/lib/x64/Release/include/openssl'
+Copying: ./include/openssl/aes.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/aes.h
+Copying: ./include/openssl/asn1.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/asn1.h
+Copying: ./include/openssl/asn1_mac.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/asn1_mac.h
+Copying: ./include/openssl/asn1err.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/asn1err.h
+Copying: ./include/openssl/asn1t.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/asn1t.h
+Copying: ./include/openssl/async.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/async.h
+Copying: ./include/openssl/asyncerr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/asyncerr.h
+Copying: ./include/openssl/bio.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/bio.h
+Copying: ./include/openssl/bioerr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/bioerr.h
+Copying: ./include/openssl/blowfish.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/blowfish.h
+Copying: ./include/openssl/bn.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/bn.h
+Copying: ./include/openssl/bnerr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/bnerr.h
+Copying: ./include/openssl/buffer.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/buffer.h
+Copying: ./include/openssl/buffererr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/buffererr.h
+Copying: ./include/openssl/camellia.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/camellia.h
+Copying: ./include/openssl/cast.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/cast.h
+Copying: ./include/openssl/cmac.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/cmac.h
+Copying: ./include/openssl/cmp.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/cmp.h
+Copying: ./include/openssl/cmp_util.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/cmp_util.h
+Copying: ./include/openssl/cmperr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/cmperr.h
+Copying: ./include/openssl/cms.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/cms.h
+Copying: ./include/openssl/cmserr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/cmserr.h
+Copying: ./include/openssl/comp.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/comp.h
+Copying: ./include/openssl/comperr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/comperr.h
+Copying: ./include/openssl/conf.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/conf.h
+Copying: ./include/openssl/conf_api.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/conf_api.h
+Copying: ./include/openssl/conferr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/conferr.h
+Copying: ./include/openssl/configuration.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/configuration.h
+Copying: ./include/openssl/core.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/core.h
+Copying: ./include/openssl/core_dispatch.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/core_dispatch.h
+Copying: ./include/openssl/core_names.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/core_names.h
+Copying: ./include/openssl/crmf.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/crmf.h
+Copying: ./include/openssl/crmferr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/crmferr.h
+Copying: ./include/openssl/crypto.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/crypto.h
+Copying: ./include/openssl/cryptoerr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/cryptoerr.h
+Copying: ./include/openssl/ct.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/ct.h
+Copying: ./include/openssl/cterr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/cterr.h
+Copying: ./include/openssl/des.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/des.h
+Copying: ./include/openssl/dh.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/dh.h
+Copying: ./include/openssl/dherr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/dherr.h
+Copying: ./include/openssl/dsa.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/dsa.h
+Copying: ./include/openssl/dsaerr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/dsaerr.h
+Copying: ./include/openssl/dtls1.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/dtls1.h
+Copying: ./include/openssl/e_os2.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/e_os2.h
+Copying: ./include/openssl/ebcdic.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/ebcdic.h
+Copying: ./include/openssl/ec.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/ec.h
+Copying: ./include/openssl/ecdh.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/ecdh.h
+Copying: ./include/openssl/ecdsa.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/ecdsa.h
+Copying: ./include/openssl/ecerr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/ecerr.h
+Copying: ./include/openssl/engine.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/engine.h
+Copying: ./include/openssl/engineerr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/engineerr.h
+Copying: ./include/openssl/err.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/err.h
+Copying: ./include/openssl/ess.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/ess.h
+Copying: ./include/openssl/esserr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/esserr.h
+Copying: ./include/openssl/evp.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/evp.h
+Copying: ./include/openssl/evperr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/evperr.h
+Copying: ./include/openssl/fips_names.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/fips_names.h
+Copying: ./include/openssl/fipskey.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/fipskey.h
+Copying: ./include/openssl/hmac.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/hmac.h
+Copying: ./include/openssl/http.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/http.h
+Copying: ./include/openssl/httperr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/httperr.h
+Copying: ./include/openssl/idea.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/idea.h
+Copying: ./include/openssl/kdf.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/kdf.h
+Copying: ./include/openssl/kdferr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/kdferr.h
+Copying: ./include/openssl/lhash.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/lhash.h
+Copying: ./include/openssl/macros.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/macros.h
+Copying: ./include/openssl/md2.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/md2.h
+Copying: ./include/openssl/md4.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/md4.h
+Copying: ./include/openssl/md5.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/md5.h
+Copying: ./include/openssl/mdc2.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/mdc2.h
+Copying: ./include/openssl/modes.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/modes.h
+Copying: ./include/openssl/obj_mac.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/obj_mac.h
+Copying: ./include/openssl/objects.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/objects.h
+Copying: ./include/openssl/objectserr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/objectserr.h
+Copying: ./include/openssl/ocsp.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/ocsp.h
+Copying: ./include/openssl/ocsperr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/ocsperr.h
+Copying: ./include/openssl/opensslconf.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/opensslconf.h
+Copying: ./include/openssl/opensslv.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/opensslv.h
+Copying: ./include/openssl/ossl_typ.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/ossl_typ.h
+Copying: ./include/openssl/param_build.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/param_build.h
+Copying: ./include/openssl/params.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/params.h
+Copying: ./include/openssl/pem.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/pem.h
+Copying: ./include/openssl/pem2.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/pem2.h
+Copying: ./include/openssl/pemerr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/pemerr.h
+Copying: ./include/openssl/pkcs12.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/pkcs12.h
+Copying: ./include/openssl/pkcs12err.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/pkcs12err.h
+Copying: ./include/openssl/pkcs7.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/pkcs7.h
+Copying: ./include/openssl/pkcs7err.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/pkcs7err.h
+Copying: ./include/openssl/provider.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/provider.h
+Copying: ./include/openssl/rand.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/rand.h
+Copying: ./include/openssl/rand_drbg.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/rand_drbg.h
+Copying: ./include/openssl/randerr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/randerr.h
+Copying: ./include/openssl/rc2.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/rc2.h
+Copying: ./include/openssl/rc4.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/rc4.h
+Copying: ./include/openssl/rc5.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/rc5.h
+Copying: ./include/openssl/ripemd.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/ripemd.h
+Copying: ./include/openssl/rsa.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/rsa.h
+Copying: ./include/openssl/rsaerr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/rsaerr.h
+Copying: ./include/openssl/safestack.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/safestack.h
+Copying: ./include/openssl/seed.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/seed.h
+Copying: ./include/openssl/self_test.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/self_test.h
+Copying: ./include/openssl/serializer.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/serializer.h
+Copying: ./include/openssl/serializererr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/serializererr.h
+Copying: ./include/openssl/sha.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/sha.h
+Copying: ./include/openssl/srp.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/srp.h
+Copying: ./include/openssl/srtp.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/srtp.h
+Copying: ./include/openssl/ssl.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/ssl.h
+Copying: ./include/openssl/ssl2.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/ssl2.h
+Copying: ./include/openssl/ssl3.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/ssl3.h
+Copying: ./include/openssl/sslerr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/sslerr.h
+Copying: ./include/openssl/stack.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/stack.h
+Copying: ./include/openssl/store.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/store.h
+Copying: ./include/openssl/storeerr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/storeerr.h
+Copying: ./include/openssl/symhacks.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/symhacks.h
+Copying: ./include/openssl/tls1.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/tls1.h
+Copying: ./include/openssl/trace.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/trace.h
+Copying: ./include/openssl/ts.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/ts.h
+Copying: ./include/openssl/tserr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/tserr.h
+Copying: ./include/openssl/txt_db.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/txt_db.h
+Copying: ./include/openssl/types.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/types.h
+Copying: ./include/openssl/ui.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/ui.h
+Copying: ./include/openssl/uierr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/uierr.h
+Copying: ./include/openssl/whrlpool.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/whrlpool.h
+Copying: ./include/openssl/x509.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/x509.h
+Copying: ./include/openssl/x509_vfy.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/x509_vfy.h
+Copying: ./include/openssl/x509err.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/x509err.h
+Copying: ./include/openssl/x509v3.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/x509v3.h
+Copying: ./include/openssl/x509v3err.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/x509v3err.h
+Copying: ./include/openssl/__DECC_INCLUDE_EPILOGUE.H to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/__DECC_INCLUDE_EPILOGUE.H
+Copying: ./include/openssl/__DECC_INCLUDE_PROLOGUE.H to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/__DECC_INCLUDE_PROLOGUE.H
+Copying: ./include/openssl/aes.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/aes.h
+Copying: ./include/openssl/asn1.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/asn1.h
+Copying: ./include/openssl/asn1_mac.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/asn1_mac.h
+Copying: ./include/openssl/asn1err.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/asn1err.h
+Copying: ./include/openssl/asn1t.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/asn1t.h
+Copying: ./include/openssl/async.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/async.h
+Copying: ./include/openssl/asyncerr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/asyncerr.h
+Copying: ./include/openssl/bio.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/bio.h
+Copying: ./include/openssl/bioerr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/bioerr.h
+Copying: ./include/openssl/blowfish.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/blowfish.h
+Copying: ./include/openssl/bn.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/bn.h
+Copying: ./include/openssl/bnerr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/bnerr.h
+Copying: ./include/openssl/buffer.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/buffer.h
+Copying: ./include/openssl/buffererr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/buffererr.h
+Copying: ./include/openssl/camellia.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/camellia.h
+Copying: ./include/openssl/cast.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/cast.h
+Copying: ./include/openssl/cmac.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/cmac.h
+Copying: ./include/openssl/cmp.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/cmp.h
+Copying: ./include/openssl/cmp_util.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/cmp_util.h
+Copying: ./include/openssl/cmperr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/cmperr.h
+Copying: ./include/openssl/cms.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/cms.h
+Copying: ./include/openssl/cmserr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/cmserr.h
+Copying: ./include/openssl/comp.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/comp.h
+Copying: ./include/openssl/comperr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/comperr.h
+Copying: ./include/openssl/conf.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/conf.h
+Copying: ./include/openssl/conf_api.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/conf_api.h
+Copying: ./include/openssl/conferr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/conferr.h
+Copying: ./include/openssl/configuration.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/configuration.h
+Copying: ./include/openssl/core.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/core.h
+Copying: ./include/openssl/core_dispatch.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/core_dispatch.h
+Copying: ./include/openssl/core_names.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/core_names.h
+Copying: ./include/openssl/crmf.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/crmf.h
+Copying: ./include/openssl/crmferr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/crmferr.h
+Copying: ./include/openssl/crypto.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/crypto.h
+Copying: ./include/openssl/cryptoerr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/cryptoerr.h
+Copying: ./include/openssl/ct.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/ct.h
+Copying: ./include/openssl/cterr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/cterr.h
+Copying: ./include/openssl/des.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/des.h
+Copying: ./include/openssl/dh.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/dh.h
+Copying: ./include/openssl/dherr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/dherr.h
+Copying: ./include/openssl/dsa.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/dsa.h
+Copying: ./include/openssl/dsaerr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/dsaerr.h
+Copying: ./include/openssl/dtls1.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/dtls1.h
+Copying: ./include/openssl/e_os2.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/e_os2.h
+Copying: ./include/openssl/ebcdic.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/ebcdic.h
+Copying: ./include/openssl/ec.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/ec.h
+Copying: ./include/openssl/ecdh.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/ecdh.h
+Copying: ./include/openssl/ecdsa.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/ecdsa.h
+Copying: ./include/openssl/ecerr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/ecerr.h
+Copying: ./include/openssl/engine.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/engine.h
+Copying: ./include/openssl/engineerr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/engineerr.h
+Copying: ./include/openssl/err.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/err.h
+Copying: ./include/openssl/ess.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/ess.h
+Copying: ./include/openssl/esserr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/esserr.h
+Copying: ./include/openssl/evp.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/evp.h
+Copying: ./include/openssl/evperr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/evperr.h
+Copying: ./include/openssl/fips_names.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/fips_names.h
+Copying: ./include/openssl/fipskey.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/fipskey.h
+Copying: ./include/openssl/hmac.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/hmac.h
+Copying: ./include/openssl/http.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/http.h
+Copying: ./include/openssl/httperr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/httperr.h
+Copying: ./include/openssl/idea.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/idea.h
+Copying: ./include/openssl/kdf.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/kdf.h
+Copying: ./include/openssl/kdferr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/kdferr.h
+Copying: ./include/openssl/lhash.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/lhash.h
+Copying: ./include/openssl/macros.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/macros.h
+Copying: ./include/openssl/md2.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/md2.h
+Copying: ./include/openssl/md4.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/md4.h
+Copying: ./include/openssl/md5.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/md5.h
+Copying: ./include/openssl/mdc2.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/mdc2.h
+Copying: ./include/openssl/modes.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/modes.h
+Copying: ./include/openssl/obj_mac.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/obj_mac.h
+Copying: ./include/openssl/objects.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/objects.h
+Copying: ./include/openssl/objectserr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/objectserr.h
+Copying: ./include/openssl/ocsp.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/ocsp.h
+Copying: ./include/openssl/ocsperr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/ocsperr.h
+Copying: ./include/openssl/opensslconf.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/opensslconf.h
+Copying: ./include/openssl/opensslv.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/opensslv.h
+Copying: ./include/openssl/ossl_typ.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/ossl_typ.h
+Copying: ./include/openssl/param_build.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/param_build.h
+Copying: ./include/openssl/params.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/params.h
+Copying: ./include/openssl/pem.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/pem.h
+Copying: ./include/openssl/pem2.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/pem2.h
+Copying: ./include/openssl/pemerr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/pemerr.h
+Copying: ./include/openssl/pkcs12.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/pkcs12.h
+Copying: ./include/openssl/pkcs12err.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/pkcs12err.h
+Copying: ./include/openssl/pkcs7.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/pkcs7.h
+Copying: ./include/openssl/pkcs7err.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/pkcs7err.h
+Copying: ./include/openssl/provider.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/provider.h
+Copying: ./include/openssl/rand.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/rand.h
+Copying: ./include/openssl/rand_drbg.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/rand_drbg.h
+Copying: ./include/openssl/randerr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/randerr.h
+Copying: ./include/openssl/rc2.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/rc2.h
+Copying: ./include/openssl/rc4.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/rc4.h
+Copying: ./include/openssl/rc5.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/rc5.h
+Copying: ./include/openssl/ripemd.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/ripemd.h
+Copying: ./include/openssl/rsa.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/rsa.h
+Copying: ./include/openssl/rsaerr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/rsaerr.h
+Copying: ./include/openssl/safestack.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/safestack.h
+Copying: ./include/openssl/seed.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/seed.h
+Copying: ./include/openssl/self_test.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/self_test.h
+Copying: ./include/openssl/serializer.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/serializer.h
+Copying: ./include/openssl/serializererr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/serializererr.h
+Copying: ./include/openssl/sha.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/sha.h
+Copying: ./include/openssl/srp.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/srp.h
+Copying: ./include/openssl/srtp.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/srtp.h
+Copying: ./include/openssl/ssl.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/ssl.h
+Copying: ./include/openssl/ssl2.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/ssl2.h
+Copying: ./include/openssl/ssl3.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/ssl3.h
+Copying: ./include/openssl/sslerr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/sslerr.h
+Copying: ./include/openssl/stack.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/stack.h
+Copying: ./include/openssl/store.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/store.h
+Copying: ./include/openssl/storeerr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/storeerr.h
+Copying: ./include/openssl/symhacks.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/symhacks.h
+Copying: ./include/openssl/tls1.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/tls1.h
+Copying: ./include/openssl/trace.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/trace.h
+Copying: ./include/openssl/ts.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/ts.h
+Copying: ./include/openssl/tserr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/tserr.h
+Copying: ./include/openssl/txt_db.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/txt_db.h
+Copying: ./include/openssl/types.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/types.h
+Copying: ./include/openssl/ui.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/ui.h
+Copying: ./include/openssl/uierr.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/uierr.h
+Copying: ./include/openssl/whrlpool.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/whrlpool.h
+Copying: ./include/openssl/x509.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/x509.h
+Copying: ./include/openssl/x509_vfy.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/x509_vfy.h
+Copying: ./include/openssl/x509err.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/x509err.h
+Copying: ./include/openssl/x509v3.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/x509v3.h
+Copying: ./include/openssl/x509v3err.h to C:/Program Files/OpenSSL/lib/x64/Release/include/openssl/x509v3err.h
+created directory `C:/Program Files/OpenSSL/lib/x64/Release/lib'
+Copying: libcrypto.lib to C:/Program Files/OpenSSL/lib/x64/Release/lib/libcrypto.lib
+Copying: libssl.lib to C:/Program Files/OpenSSL/lib/x64/Release/lib/libssl.lib
+Copying: ossl_static.pdb to C:/Program Files/OpenSSL/lib/x64/Release/lib/ossl_static.pdb
+        "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.26.28801\bin\HostX64\x64\nmake.exe" /                   depend && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.26.28801\bin\HostX64\x64\nmake.exe" /                   _build_modules
+
+Microsoft (R) Program Maintenance Utility Version 14.26.28805.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Microsoft (R) Program Maintenance Utility Version 14.26.28805.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+*** Installing engines
+created directory `C:/Program Files/OpenSSL/lib/x64/Release/lib/engines-3'
+*** Installing modules
+created directory `C:/Program Files/OpenSSL/lib/x64/Release/lib/ossl-modules'
+Copying: providers/fips.dll to C:/Program Files/OpenSSL/lib/x64/Release/lib/ossl-modules/fips.dll
+Copying: providers/legacy.dll to C:/Program Files/OpenSSL/lib/x64/Release/lib/ossl-modules/legacy.dll
+Copying: providers//fips.pdb to C:/Program Files/OpenSSL/lib/x64/Release/lib/ossl-modules/fips.pdb
+Copying: providers//legacy.pdb to C:/Program Files/OpenSSL/lib/x64/Release/lib/ossl-modules/legacy.pdb
+        "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.26.28801\bin\HostX64\x64\nmake.exe" /                   depend && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.26.28801\bin\HostX64\x64\nmake.exe" /                   _build_programs
+
+Microsoft (R) Program Maintenance Utility Version 14.26.28805.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Microsoft (R) Program Maintenance Utility Version 14.26.28805.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+*** Installing runtime programs
+Copying: apps//openssl.exe to C:/Program Files/OpenSSL/lib/x64/Release/bin/openssl.exe
+Copying: apps//openssl.pdb to C:/Program Files/OpenSSL/lib/x64/Release/bin/openssl.pdb
+Copying: tools//c_rehash.pl to C:/Program Files/OpenSSL/lib/x64/Release/bin/c_rehash.pl

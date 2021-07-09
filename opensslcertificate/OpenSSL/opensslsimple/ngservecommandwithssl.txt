@@ -1,0 +1,1 @@
+ng serve --ssl true --ssl-cert "D:\dev\angular\angular\SocialApp\SocialApp-SPA\ssl\server.crt" --ssl-key "D:\dev\angular\angular\SocialApp\SocialApp-SPA\ssl\server.key"

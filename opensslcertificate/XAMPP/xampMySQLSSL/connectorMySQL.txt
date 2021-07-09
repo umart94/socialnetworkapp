@@ -1,0 +1,26 @@
+6.10 Tutorial: Configuring SSL with Connector/NET
+6.10.1 Using PEM Certificates in Connector/NET
+6.10.2 Using PFX Certificates in Connector/NET
+In this tutorial you will learn how you can use MySQL Connector/NET to connect to a MySQL server configured to use SSL. Support for SSL client PFX certificates was added to the Connector/NET 6.2 release series. PFX is the native format of certificates on Microsoft Windows. More recently, support for SSL client PEM certificates was added in the Connector/NET 8.0.16 release.
+
+MySQL Server uses the PEM format for certificates and private keys. Connector/NET enables the use of either PEM or PFX certificates with both classic MySQL protocol and X Protocol. This tutorial uses the test certificates from the server test suite by way of example. You can obtain the MySQL Server source code from MySQL Downloads. The certificates can be found in the ./mysql-test/std_data directory.
+
+To apply the server-side startup configuration for SSL connections:
+
+In the MySQL Server configuration file, set the SSL parameters as shown in the follow PEM format example. Adjust the directory paths according to the location in which you installed the MySQL source code.
+
+ssl-ca=path/to/repo/mysql-test/std_data/cacert.pem
+ssl-cert=path/to/repo/mysql-test/std_data/server-cert.pem
+ssl-key=path/to/repo/mysql-test/std_data/server-key.pem
+The SslCa connection option accepts both PEM and PFX format certificates, using the file extension to determine how to process certificates. Change cacert.pem to cacert.pfx if you intend to continue with the PFX portion of this tutorial.
+
+For a description of the connection string options used in this tutorial, see Section 4.5, “Connector/NET 8.0 Connection Options Reference”.
+
+Create a test user account to use in this tutorial and set the account to require SSL. Using the MySQL Command-Line Client, connect as root and create the user sslclient (with test as the account password). Then, grant all privileges to the new user account as follows:
+
+CREATE USER sslclient@'%' IDENTIFIED BY 'test' REQUIRE SSL;
+
+GRANT ALL PRIVILEGES ON *.* TO sslclient@'%';
+For detailed information about account-management strategies, see Access Control and Account Management.
+
+Now that the server-side configuration is finished, you can begin the client-side configuration using either PEM or PFX format certificates in Connector/NET.
